@@ -1,8 +1,10 @@
+""" pdf to markdown with pymupdf4llm """
 from typing import List
 
 import pymupdf4llm
 
-def pdf_to_markdown(file_name: str) -> List[dict]:
+def pdf_to_markdown(file_name) -> List[dict]:
+    """ main """
     input_file = "data/" + file_name + ".pdf"
 
     md_pages = pymupdf4llm.to_markdown(input_file, page_chunks = True)
