@@ -44,8 +44,6 @@ def extract_lines(pdf_path):
                             "line_id": line_id+1,
                             "file_path": pdf_path
                         })
-                        if line_content == " ":
-                            print("YA!!!")
                         lines.append(line_content + "\n")
                         line_content = ""
 

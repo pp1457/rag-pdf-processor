@@ -1,9 +1,12 @@
+"""chunk by markdown"""
 import pathlib
 import re
 from typing import List
 from pdf_to_markdown.with_pdfplumber import pdf_to_markdown
 
 def get_md_pages() -> List[dict]:
+    """split pdf into markdown pages"""
+
     file_name = input("File Name: ")
     save_to_new_file = input("Save to new file? (y/N) ")
     output_file = "markdown/" + file_name + ".md"
@@ -15,15 +18,18 @@ def get_md_pages() -> List[dict]:
             md_content += page["text"]
         pathlib.Path(output_file).write_bytes(md_content.encode())
         print(f"Saved as {output_file}")
-    
+
     return md_pages
 
 def contains_strong_text(s):
+    """check if string s contain strong text"""
+
     # Regular expression to match **strong text**
     pattern = r'\*\*[^*]+\*\*'
     return bool(re.search(pattern, s))
 
 def count_leading_hash(s):
+    """count leading hash in string s"""
     s = s.lstrip()
     count = 0
     for char in s:
@@ -38,12 +44,14 @@ def count_leading_hash(s):
     return count
 
 def context(contents) -> str:
+    """return concatenation of contents"""
+
     output = ""
-    for i in range(len(contents)):
+    for _, content in enumerate(contents):
 #        print(contents[i])
 #        print("---------")
-        output += contents[i]
-    
+        output += content
+
 # if contents:
 #     for line in contents[-1].splitlines():
 #         output += line.lstrip("#")
@@ -52,12 +60,13 @@ def context(contents) -> str:
 
 
 def split_text(md_pages: List[dict]) -> List[dict]:
+    """split text into chunks based on markdown"""
     final_chunks = []
-    
+
     split_level = int(input("Enter the number of # (between 1 and 4): "))
     split_on_strong = input("Split on **{Strong Text}**? (Y/n) ")
 
-    line_id = 0;
+    line_id = 0
 
     stack = []
 
@@ -65,6 +74,8 @@ def split_text(md_pages: List[dict]) -> List[dict]:
     cur_section = "\n"
 
     total_pages = len(md_pages)
+
+    empty_line = 0
 
     for page_index, page in enumerate(md_pages):
 
@@ -75,7 +86,7 @@ def split_text(md_pages: List[dict]) -> List[dict]:
         if page_index == total_pages - 1:
             lines.append("#")
 
-        for line_index, line in enumerate(lines):
+        for _, line in enumerate(lines):
 
             line_id += 1
 
@@ -86,6 +97,15 @@ def split_text(md_pages: List[dict]) -> List[dict]:
 
             if contains_strong_text(line) and not split_on_strong == "n":
                 hash_count = split_level
+
+            if line.strip() == "":
+                empty_line += 1
+            else:
+                empty_line = 0
+
+            if empty_line >= 3:
+                hash_count = 1
+                empty_line = -10000000
 
             if split_level >= hash_count:
 
@@ -117,19 +137,17 @@ def split_text(md_pages: List[dict]) -> List[dict]:
                     "lev": hash_count,
                     "page": page["metadata"].get("page") 
                 })
-
             else:
-
                 if (
-                    (last_line.strip() == "" and re.match(r"^\s*-----\s*$", line)) or 
-                     line.strip() == ""
+                    (last_line.strip() == "" and re.match(r"^\s*-----\s*$", line)) or
+                     line.strip() == "" or
+                     re.match(r'^\s*(Page\s+\d+|\d+|\d+/\d+)\s*$', line.strip())
                    ):
-                    last_line = line
+                    last_line = ""
                     continue
-                else:
-                    if line_id == 1:
-                        stack.append({"pos": line_id, "lev": 100, "page": page["metadata"]["page"]})
-                    cur_section += line + "\n"
+                if line_id == 1:
+                    stack.append({"pos": line_id, "lev": 100, "page": page["metadata"]["page"]})
+                cur_section += line + "\n"
 
             last_line = line
 
@@ -138,12 +156,13 @@ def split_text(md_pages: List[dict]) -> List[dict]:
 
 
 def main():
+    """ main """
     md_pages = get_md_pages()
     final_chunks = split_text(md_pages)
 
     chunk_id = 0
 
-    with open("output.txt", "w") as file:
+    with open("output.txt", "w", encoding="utf-8") as file:
         for chunk in final_chunks:
             chunk_id += 1
             file.write("\n-----------------------\n")
@@ -157,8 +176,5 @@ def main():
             file.write("\n\nFilename: ")
             file.write(str(chunk["filename"]))
 
-    
-
-
 if __name__ == "__main__":
-    main(); 
+    main()
