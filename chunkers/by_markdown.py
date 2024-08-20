@@ -3,14 +3,15 @@ import pathlib
 import re
 from typing import List
 from pdf_to_markdown.with_pdfplumber import pdf_to_markdown
+from tools.write_to_csv import write_to_csv
 
 def get_md_pages() -> List[dict]:
     """split pdf into markdown pages"""
 
-    file_name = input("File Name: ")
+    filename = input("File Name: ")
     save_to_new_file = input("Save to new file? (y/N) ")
-    output_file = "markdown/" + file_name + ".md"
-    md_pages = pdf_to_markdown(file_name)
+    output_file = "markdown/" + filename + ".md"
+    md_pages = pdf_to_markdown(filename)
 
     if save_to_new_file == "y":
         md_content = ""
@@ -103,7 +104,7 @@ def split_text(md_pages: List[dict]) -> List[dict]:
             else:
                 empty_line = 0
 
-            if empty_line >= 3:
+            if empty_line >= 2:
                 hash_count = 1
                 empty_line = -10000000
 
@@ -163,9 +164,22 @@ def main():
     chunk_id = 0
 
     with open("output.txt", "w", encoding="utf-8") as file:
+        fields = ["Chunk ID", "Text", "Page Range", "Line Range", "Filename"]
+        rows = []
+        
         for chunk in final_chunks:
             chunk_id += 1
+            row = []
+
             file.write("\n-----------------------\n")
+            row.append(chunk_id)
+            row.append(chunk["text"])
+            row.append(chunk["page_range"])
+            row.append(chunk["line_range"])
+            row.append(chunk["filename"])
+
+            rows.append(row)
+
             file.write(f"Chunk {chunk_id}: \n\n")
             file.write("Text: \n")
             file.write(chunk["text"])
@@ -175,6 +189,11 @@ def main():
             file.write(str(chunk["line_range"]))
             file.write("\n\nFilename: ")
             file.write(str(chunk["filename"]))
+
+        write_to_csv(f"csv/fubon.csv", fields, rows)
+
+
+        
 
 if __name__ == "__main__":
     main()

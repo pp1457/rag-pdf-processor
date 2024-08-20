@@ -8,14 +8,8 @@ def extract_lines(pdf_path):
 
     font_size_counter = Counter()
 
-    line_metadatas = [{
-        "font_size": 0,
-        "page": 0,
-        "line_id": 0,
-        "file_path": pdf_path
-    }]
-
-    lines = [""]
+    line_metadatas = []
+    lines = []
 
     line_id = 0
 
@@ -41,7 +35,7 @@ def extract_lines(pdf_path):
                         line_metadatas.append({
                             "font_size": cur_font_size,
                             "page": pdf.pages[i].page_number,
-                            "line_id": line_id+1,
+                            "line_id": line_id,
                             "file_path": pdf_path
                         })
                         lines.append(line_content + "\n")
@@ -54,7 +48,7 @@ def extract_lines(pdf_path):
                     line_id += 1
 
                 line_content += char["text"]
-                tmp_counter[int(char["size"])] += 1
+                tmp_counter[char["size"]] += 1
                 last_bottom = char["bottom"]
             cur_font_size = 0
 
@@ -79,7 +73,7 @@ def extract_lines(pdf_path):
 
 #    print(font_size_counter.items())
 
-    repeated_sizes = [size for size, count in font_size_counter.items() if count > 1]
+    repeated_sizes = [size for size, count in font_size_counter.items() if count > 0]
 
     repeated_sizes.sort(reverse=True)
     header_sizes = []
@@ -102,8 +96,6 @@ def add_hash_to_header_lines(lines, line_metadatas, header_sizes):
     last_page = -1
 
     for i in range(len(lines)):
-        if not i:
-            continue
 
         cur_font_size = line_metadatas[i]["font_size"]
         # print("cur_font_size: ")
