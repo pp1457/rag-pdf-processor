@@ -9,8 +9,8 @@ def save_result(final_chunks, method, filename):
     os.makedirs(csv_dir, exist_ok=True)
 
     # Define file paths
-    txt_file_path = os.path.join(output_dir, f"{filename}.txt")
-    csv_file_path = os.path.join(csv_dir, f"{filename}.csv")
+    txt_file_path = os.path.join(output_dir, f"{filename}_{method}.txt")
+    csv_file_path = os.path.join(csv_dir, f"{filename}_{method}.csv")
 
     # Define CSV fields and initialize rows list
     fields = ["Chunk ID", "Text", "Page Range", "Line Range", "Filename", "Embedding"]

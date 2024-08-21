@@ -2,6 +2,7 @@ import pdfplumber
 from typing import List
 from pdf_to_markdown.with_pdfplumber import extract_lines
 from tools.save_result import save_result
+from tools.get_embedding import add_embeddings
 
 def split(chars, split_character):
     result = []
@@ -135,6 +136,8 @@ def main():
     overlap = int(input("Overlap Size: "))
 
     final_chunks = split_text(lines, line_metadatas, ["。", ".", "\n", "  ", " "], split_empty_line, chunk_size, overlap)
+
+    final_chunks = add_embeddings(final_chunks)
 
     save_result(final_chunks, "recursive_char", filename)
 

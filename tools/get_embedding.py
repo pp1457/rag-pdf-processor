@@ -20,6 +20,12 @@ def get_embedding(doc):
 
     return response.data[0].embedding
 
+def add_embeddings(chunks):
+    for chunk in chunks:
+        chunk["embedding"] = get_embedding(chunk["text"])
+    return chunks
+
+
 def main():
     get_embedding("Apple")
 
