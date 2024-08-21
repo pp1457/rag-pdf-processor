@@ -61,7 +61,7 @@ def split_empty_lines(lines, line_metadatas):
     for line_id, line in enumerate(lines):
         if line.strip() == "":
             empty_line_count += 1
-            if empty_line_count == 2:
+            if empty_line_count == 1:
                 empty_line_count = -10000000
                 new_lines.append("")
                 new_metadatas.append(line_metadatas[line_id])
@@ -80,10 +80,10 @@ def transform_to_chunk(chars):
         text += char["text"]
 
     final_chunk = {
-        "filename": chars[0]["filename"],
+        "text": text,
         "page_range": (chars[0]["page"], chars[-1]["page"]),
         "line_range": (chars[0]["line_id"], chars[-1]["line_id"]),
-        "text": text
+        "filename": chars[0]["filename"],
     }
 
     return final_chunk
@@ -134,7 +134,7 @@ def main():
     chunk_size = int(input("Chunk Size: "))
     overlap = int(input("Overlap Size: "))
 
-    final_chunks = split_text(lines, line_metadatas, ["。", "\n", "，", " "], split_empty_line, chunk_size, overlap)
+    final_chunks = split_text(lines, line_metadatas, ["。", ".", "\n", "  ", " "], split_empty_line, chunk_size, overlap)
 
     save_result(final_chunks, "recursive_char", filename)
 
