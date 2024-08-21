@@ -4,7 +4,42 @@ This repository is used for processing pdf for RAG
 
 ---
 
-## chunkers
+
+## `pdf_to_markdown`
+### `with_pdfplumber.py`
+* `extract_lines(pdf_path) -> lines, line_metadatas, header_sizes`
+    - `pdf_path` :
+Absolute path of the pdf file
+    - `lines(List(str))` :
+Content of each line
+    - `line_metadatas(List(str))` :
+Dictionary with the following keys
+        - `font_size(int)` : most common font size in this line
+        - `page(int)` : page number of this line
+        - `line_id(int)` : id of this line
+        - `file_path(str)` : file path of this line
+    - `header_sizes(List(int))` :
+List of header size sorted from big to small
+* `add_hash_to_header_lines(lines, line_metadatas, header_sizes) -> md_pages`
+    - `lines(List(str))` :
+Return value of `extract_lines()`
+    - `line_metadatas(List(str))` :
+Return value of `extract_lines()`
+    - `header_sizes(List(int))` :
+Return value of `extract_lines()`
+
+* `pdf_to_markdown(filename) -> md_pages`
+    - `filename(str)` :
+Filename without extension like "report" or "game"
+    - `md_pages(List[dict])` :
+List of pages, each page is a dictionary, contains the following keys
+        - `text(str)` : content of the page
+        - `metadata(dict)` : dictionary contains file_path, and page(page number) 
+    
+
+---
+
+## `chunkers`
 ### `by_markdown.py`
 * `get_md_pages(filename, save_to_new_file) -> md_pages`
     - `filename(str)` :
@@ -48,3 +83,5 @@ List of character to split on
 Expected chunk size, real size will not exceed this
     - `overlap(int)` :
 Expected overlap size
+
+---
