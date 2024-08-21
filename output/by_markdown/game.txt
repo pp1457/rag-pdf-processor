@@ -1,6 +1,8 @@
- 
- 
-  
+
+-----------------------
+Chunk 1: 
+
+Text: 
 ###國立臺灣大學電機資訊學院資訊工程學系 
 國
 立
@@ -14,13 +16,33 @@
 程
 學
 系
+
+
+Page Range: (1, 1)
+
+Line Range: (4, 16)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 2: 
+
+Text: 
 ### 碩士論文 
 Department of Computer Science and Information Engineering                        
 College of Electrical Engineering & Computer Science 
 National Taiwan University  
 碩士論文
- 
- 
+
+
+Page Range: (1, 1)
+
+Line Range: (17, 22)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 3: 
+
+Text: 
  
 遊
 戲
@@ -42,64 +64,309 @@ National Taiwan University
 與
 比
 較
- 
- 
- 
- 
- 
+
+
+Page Range: (1, 1)
+
+Line Range: (23, 45)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 4: 
+
+Text: 
  
 黃
 源
 鱗
- 
+
+
+Page Range: (1, 1)
+
+Line Range: (46, 54)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 5: 
+
+Text: 
  
 撰
+
+
+Page Range: (1, 1)
+
+Line Range: (55, 57)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 6: 
+
+Text: 
  
- 
- 
-97
 2 master thesis 
 ### 
+
+
+Page Range: (1, 1)
+
+Line Range: (62, 62)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 7: 
+
+Text: 
+ 
+2 master thesis 
 ###遊戲演算法在撲克牌遊戲-大老二上的應用與比較    
+
+
+Page Range: (1, 1)
+
+Line Range: (63, 63)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 8: 
+
+Text: 
+ 
+2 master thesis 
 ###     The game theory’s application and comparison on 
+
+
+Page Range: (1, 1)
+
+Line Range: (64, 64)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 9: 
+
+Text: 
+ 
+2 master thesis 
 ###pokergame Bigtwo 
+
+
+Page Range: (1, 1)
+
+Line Range: (65, 65)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 10: 
+
+Text: 
+ 
+2 master thesis 
 ### 
+
+
+Page Range: (1, 1)
+
+Line Range: (66, 66)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 11: 
+
+Text: 
+ 
+2 master thesis 
 ###黃源鱗 
+
+
+Page Range: (1, 1)
+
+Line Range: (67, 67)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 12: 
+
+Text: 
+ 
+2 master thesis 
 ###Yuan-Lin Huang 
+
+
+Page Range: (1, 1)
+
+Line Range: (68, 68)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 13: 
+
+Text: 
+ 
+2 master thesis 
 ### 
-####指導教授﹕呂育道 教授 
+指導教授﹕呂育道 教授 
+
+
+Page Range: (1, 1)
+
+Line Range: (69, 70)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 14: 
+
+Text: 
+ 
+2 master thesis 
 ###Dr. Yuh-Dauh Lyuu 
+
+
+Page Range: (1, 1)
+
+Line Range: (71, 71)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 15: 
+
+Text: 
+ 
+2 master thesis 
 ### 
+
+
+Page Range: (1, 1)
+
+Line Range: (72, 72)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 16: 
+
+Text: 
+ 
+2 master thesis 
 ###中華民國 98 年 6 月 
+
+
+Page Range: (1, 1)
+
+Line Range: (73, 73)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 17: 
+
+Text: 
+ 
+2 master thesis 
 ###June 2009
 
+
+Page Range: (1, 2)
+
+Line Range: (74, 75)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 18: 
+
+Text: 
  
 i 
+
+
+Page Range: (2, 2)
+
+Line Range: (76, 77)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 19: 
+
+Text: 
 # 國立臺灣大學碩士學位論文 
+
+
+Page Range: (2, 2)
+
+Line Range: (78, 78)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 20: 
+
+Text: 
 #口試委員會審定書 
 ##論文中文題目 
+
+
+Page Range: (2, 2)
+
+Line Range: (80, 80)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 21: 
+
+Text: 
+#口試委員會審定書 
 ##論文英文題目 
- 
 本論文係○○○君（○學號○）在國立臺灣大學資訊工程學系完成
 之碩士學位論文，於民國○○年○○月○○日承下列考試委員審查通過
 及口試及格，特此證明 
-##### 
-##### 
+
+
+Page Range: (2, 2)
+
+Line Range: (81, 86)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 22: 
+
+Text: 
+ 
 口試委員： 
                 _________ 
 （指導教授） 
-                          
-##### 
-                          
- 
-######                          
-###### 
-######                          
+
+
+Page Range: (2, 2)
+
+Line Range: (87, 91)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 23: 
+
+Text: 
  
 系 主 任                ________ 
 
+
+Page Range: (2, 3)
+
+Line Range: (92, 100)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 24: 
+
+Text: 
  
 ii 
+
+
+Page Range: (3, 3)
+
+Line Range: (101, 102)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 25: 
+
+Text: 
 # 致謝 
 感謝徐讚昇老師開的課「電腦對局理論」啟發提供了我論文的方向 
 感謝指導老師呂育道的同意與支持讓我可以研究這個題目 
@@ -107,22 +374,82 @@ ii
 感謝我的朋友、同學給予我鼓勵和支持讓我能夠順利完成這論文 
 ### 
 
+
+Page Range: (3, 4)
+
+Line Range: (108, 109)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 26: 
+
+Text: 
  
 iii 
+
+
+Page Range: (4, 4)
+
+Line Range: (110, 111)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 27: 
+
+Text: 
 # 中文摘要 
 遊戲演算法在電腦人工智慧中一直扮演著重要的角色之一，藉由嘗試讓電
 腦更有智慧的玩遊戲，探討何謂人類的智慧。遊戲演算法的研究從早期的雙人
 遊戲、完全資訊遊戲，延伸到多人遊戲、不完全資訊遊戲，有各式各樣的演算
 法。本文使用其中一些演算法，套用在撲克牌遊戲-大老二，比較其優劣並加以
 討論。 
- 
 關鍵字： 
 遊戲演算法，人工智慧，多人遊戲，maxn演算法，撲克牌遊戲-大老二 
 ### 
+
+
+Page Range: (4, 4)
+
+Line Range: (121, 121)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 28: 
+
+Text: 
+# 中文摘要 
+遊戲演算法在電腦人工智慧中一直扮演著重要的角色之一，藉由嘗試讓電
+腦更有智慧的玩遊戲，探討何謂人類的智慧。遊戲演算法的研究從早期的雙人
+遊戲、完全資訊遊戲，延伸到多人遊戲、不完全資訊遊戲，有各式各樣的演算
+法。本文使用其中一些演算法，套用在撲克牌遊戲-大老二，比較其優劣並加以
+討論。 
+關鍵字： 
+遊戲演算法，人工智慧，多人遊戲，maxn演算法，撲克牌遊戲-大老二 
 ### 
 
+
+Page Range: (4, 5)
+
+Line Range: (122, 123)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 29: 
+
+Text: 
  
 iv 
+
+
+Page Range: (5, 5)
+
+Line Range: (124, 125)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 30: 
+
+Text: 
 # Abstract 
 Game algorithms play an important role of artificial intelligence, we try to find 
 human intelligence by making computer play games more wisely. Researches of 
@@ -130,14 +457,21 @@ game algorithms from earlier two-player games and perfect information games
 extend to multi-player games and imperfect information games. There are many 
 kinds of game algorithms. In this thesis, we apply some of these algorithms to the 
 pokergame Bigtwo. We also analyze the various algorithms. 
- 
 Key words: 
 Game algorithm, artificial intelligence, multi-player game, maxn algorithm, 
 pokergame Bigtwo 
- 
 
- 
- 
+
+Page Range: (5, 6)
+
+Line Range: (126, 137)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 31: 
+
+Text: 
+
  目  錄 
 口試委員會審定書...................................................i 
 致謝..............................................................ii 
@@ -152,32 +486,51 @@ Abstract..........................................................iv
 第四章 實驗設置與數據............................................14 
 第五章 結論......................................................16 
 參考文獻..........................................................17 
- 
 
- 
- 
-  
+
+Page Range: (6, 7)
+
+Line Range: (138, 155)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 32: 
+
+Text: 
+
 圖目錄 
 圖1 ALPHA PRUNING。...................................................5 
 圖2 BETA PRUNING。....................................................6 
 圖3 MAXN。..........................................................8 
 圖4 MAXN PRUNING。....................................................9 
 圖5 MAXN EXCEPTION。...................................................9 
- 
- 
- 
- 
 
- 
+
+Page Range: (7, 7)
+
+Line Range: (156, 166)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 33: 
+
+Text: 
  
  表目錄 
 表格 1四個TPE A電腦的比賽結果。...................................14 Y
 表格 2三個TPE A和一個TYPE B(搜尋深度6)電腦的比賽結果。.............15 Y
- 
 
- 
-1 
-  
+
+Page Range: (7, 9)
+
+Line Range: (167, 176)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 34: 
+
+Text: 
+
 ###第一章 簡介 
 人工智慧在電腦研究的領域上一直是熱門的研究之一，學者們都致力於
 找尋如何讓電腦行動得更貼近人類的行為的方法，希望能讓電腦更有智慧的
@@ -197,11 +550,18 @@ perfect information game)，但也有越來越多延伸的演算法開始著眼�
 第三章說明撲克牌遊戲-大老二的遊戲規則及玩法。第四章是實驗的設置及數
 據。第五章是討論及結論。 
 
+
+Page Range: (9, 10)
+
+Line Range: (181, 199)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 35: 
+
+Text: 
  
-2 
-  
 ###第二章  遊戲演算法的歷史 
- 
 2.1 最早期的遊戲研究 
 一般遊戲演算法的學者認為，最早開始創立有系統的遊戲演算法的始祖
 是夏農於1949年所發表的文章 [8] 。其為一篇研究如何使用程式下西洋棋
@@ -218,8 +578,17 @@ perfect information game)，但也有越來越多延伸的演算法開始著眼�
 另一種方法是算出所有可能的盤面，藉此找出如何進行到所謂「勝利」的盤
 面，而所有的盤面總共有64!/ 32!(8!)2(2!)6 種，將近1043種，所以這也是
 
+
+Page Range: (10, 11)
+
+Line Range: (203, 220)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 36: 
+
+Text: 
  
-3 
  不切實際的。 
 既然不可能列出所有的可能，那麼我們的策略是，盡可能的從目前的情
 勢中找出好的下一步。在此他也提出了一項非常重要的設定，那就是審局函
@@ -240,14 +609,22 @@ perfect information game)，但也有越來越多延伸的演算法開始著眼�
 幾種步法。但甚麼是好的步法，一個比較簡單的判別例子就是：可以吃掉對
 方棋子的步法應該是好的。針對這些好的步法做搜尋，我們稱之為Type-B。
 
+
+Page Range: (11, 12)
+
+Line Range: (221, 242)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 37: 
+
+Text: 
  
-4 
  挑一些看來比較重要的步走下去，可以節省很多時間，增加效率。 
 最後，我們應該避免每次在同樣的盤面下，讓電腦做完全相同的決定。
 因為就最後結果來說，這一步未必是最正確的選擇，甚至可能是導致失敗的
 原因。我們可以增加一些隨機變數，使電腦在做決定時不會每次搜尋的順序
 和選擇的方式都相同。 
- 
 2.2 雙人完全資訊遊戲的研究 
 有了基本的系統架構之後，後來研究遊戲的學者們，都在想辦法使程式
 的效能提高。大致上的研究方向是：使用更精確的審局函數，使用更快速搜
@@ -262,14 +639,21 @@ Alpha剪裁：產生於max node，假設在max node的第一個分支搜尋完�
 個做為判別的bound。當分支2.1傳回一個值＜bound，那麼接下來分支2.2
 及之後的分支就沒必要做搜尋了，因為分支2的值至少會＜bound (min 
 
+
+Page Range: (12, 13)
+
+Line Range: (243, 264)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 38: 
+
+Text: 
  
-5 
  node)。對分支1來說，它的值至少會＞bound，所以2.2以後搜尋出來的值
 都是沒有意義的。詳見圖一。(白色節點代表max node，黑色節點代表min 
 node 。) 
- 
 圖1 alpha pruning。 
- 
 Beta剪裁：產生於min node，假設在min node的第一個分支搜尋完後
 得到了一個value，接著蒐尋第二個分支，則第一個分支的value可以形成一
 個做為判別的bound。當分支1.2.1傳回一個值＞bound，那麼接下來分支
@@ -277,11 +661,18 @@ Beta剪裁：產生於min node，假設在min node的第一個分支搜尋完後
 (max node)。對分支1來說，它的值至少會＜bound，所以1.2.2以後搜尋出
 來的值都是沒有意義的。詳見圖二。 
 
+
+Page Range: (13, 14)
+
+Line Range: (265, 279)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 39: 
+
+Text: 
  
-6 
-  
 圖2 beta pruning。 
- 
 在學會alpha-beta pruning後，我們開始研究如何讓一棵game tree所
 需搜尋的節點數減到最少，也就是能夠做最多的剪裁。根據研究我們發現，
 若是一棵樹它的排列夠好的話，它就可以做最多的剪裁。甚麼是一個好的排
@@ -294,8 +685,17 @@ Beta剪裁：產生於min node，假設在min node的第一個分支搜尋完後
 思考下一步該如何走時，一定會先挑一些看起來比較有利可圖的步法去想下
 一步之後的局勢。例如下了這一步可以威脅對方的king，就會優先考慮。而
 
+
+Page Range: (14, 15)
+
+Line Range: (280, 296)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 40: 
+
+Text: 
  
-7 
  比較不重要的步法，往往擺在最後才去思考其可能性。例如走了一步對棋局
 無關緊要的士兵。 
 除了如何減少節點增加搜尋效率以外，也有些人專注於不同方向的研究
@@ -312,12 +712,20 @@ Beta剪裁：產生於min node，假設在min node的第一個分支搜尋完後
 輸(或一個值)，然後再將結果往回傳到每一個經過的節點做累積。 
 而隨著電腦連結速度變快，以及多核心漸漸普及，平行演算法也開始被
 應用結合到其他演算法裡[3]，都是為了能更提升程式計算的速度。 
- 
 2.3 多人遊戲的研究 
 除了雙人遊戲外，也越來越多人開始投入研究多人遊戲的領域，多人遊
 
+
+Page Range: (15, 16)
+
+Line Range: (297, 318)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 41: 
+
+Text: 
  
-8 
  戲有許多不同於雙人遊戲的挑戰[9]，無法完全套用雙人遊戲的經驗在其上。 
 首先光是max-min search，就不是可以直接套用的演算法，因為此時玩
 家已經變成3人4人。因此有人提出了maxn algorithm[6]，其概念跟max-min
@@ -326,28 +734,43 @@ Beta剪裁：產生於min node，假設在min node的第一個分支搜尋完後
 N-tuple值的陣列，第i-tuple的值就代表著玩家i的分數。根據max節點的
 原則，在玩家1的節點上，對其子節點做搜尋時，就挑選使玩家１有最高分
 數的節點(tuple-1分數最高的)。其他節點則依此類推。如圖三。 
- 
 圖3 maxn。 
 Maxn 也有所謂的alpha-beta剪裁法，條件是基於tuple值的總和須固定
 (上限)以及其值至少要大於0(下限)。那麼假設節點a的tuple-1 的值加上節
 點f的tuple-2的值已經大於總和，那節點f的其餘子節點是可以忽略不做搜尋
 的。詳見圖四。 
 
+
+Page Range: (16, 17)
+
+Line Range: (319, 335)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 42: 
+
+Text: 
  
-9 
-  
 圖4 maxn pruning。 
 但是alpha-beta到了多人遊戲也是有例外的，其原因有二，一個是即使
 被剪裁掉的節點仍然有可能影響到整棵遊戲樹的值；其二在於平衡點取捨的
 不同，會造成整個遊戲樹的不同。其一，詳見圖五，若根據alpha-beta剪裁，
 f應該是要被剪掉的，但是依據f的值的不同，整棵樹的結果會不同。 
- 
 圖5 maxn exception。 
 其二，所謂的平衡點是指當某一節點向下搜尋其子節點時，遇到兩個(或
 以上)子節點同分的情況。在雙人遊戲時，因為總和相同又只有兩個玩家，所
 
+
+Page Range: (17, 18)
+
+Line Range: (336, 348)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 43: 
+
+Text: 
  
-10 
  以在其中一個玩家的分數相同的情況下，另一個玩家的分數也會相同。但到
 了多人遊戲，一個玩家分數相同，其餘的玩家分數卻不一定相同。假設玩家3
 的節點a的子節點其值分別是(3,1,6)和(4,0,6)，對於該節點，兩個的值都
@@ -359,8 +782,17 @@ f應該是要被剪掉的，但是依據f的值的不同，整棵樹的結果會
 那麼所謂的搜尋演算法，勢必又必須做一些相對應的更改。使用Monte Carlo
 做模擬延伸推測對手牌組是個還不錯的方法[4]。 
 
+
+Page Range: (18, 19)
+
+Line Range: (349, 361)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 44: 
+
+Text: 
  
-11 
 ### 第三章 大老二的玩法與規則 
 本章將介紹多人撲克牌遊戲-大老二的玩法。 
 首先玩家通常是2-4人，將一副撲克牌52張牌平均分配給每個人，即可
@@ -379,8 +811,17 @@ f應該是要被剪掉的，但是依據f的值的不同，整棵樹的結果會
 遊戲的牌型: 
 分為單張、一對、五隻的特殊牌型 
 
+
+Page Range: (19, 20)
+
+Line Range: (364, 381)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 45: 
+
+Text: 
  
-12 
  • 單張（Single）：任何一隻手中的牌，出牌時必須大於上家出的一隻牌。
 例如，♠A比♥A，♠A又大於♠K、♠Q等，以此類推。  
 • 一對（Pair）：任何兩隻同數字或字母的牌，出牌時跟單隻一樣，必須
@@ -399,22 +840,39 @@ f應該是要被剪掉的，但是依據f的值的不同，整棵樹的結果會
 的特性，也就是說五隻連續的牌，而五隻都是同一種花。最強的同花順是♠ 
 2-3-4-5-6。  
 
+
+Page Range: (20, 21)
+
+Line Range: (382, 401)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 46: 
+
+Text: 
  
-13 
  • 一條龍 也就是手中13張牌完全沒有重複。不過此種組合機率非常低。  
 出牌時，必須依照上家打出的牌型出同樣類型的牌，單張就單張，一對就
 一對，順子就順子，葫蘆就葫蘆。唯鐵支、同花順、一條龍稱之「怪物」，在
 任何時候皆可出牌。若是上家出了鐵支、同花順，則你只能出比他大的鐵支或
 同花順(ps.同花順可以壓鐵支)，一條龍則該玩家已經出完牌直接勝利。 
- 
 計分方式:  
 當有人出完牌時，則其餘三家每人每有一張手牌算1分，總和加到贏的玩
 家的積分裡。例:玩家一出完牌，玩家二還有3張牌、玩家三還有6張牌、玩
 家四還有2張牌，則玩家一得11分、玩家二 -3分、玩家三 -6分、玩家四
 -2分。 
 
+
+Page Range: (21, 22)
+
+Line Range: (402, 415)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 47: 
+
+Text: 
  
-14 
 ### 第四章 實驗設置與數據 
 接著說明實驗的設置與數據 
 關於電腦的人工智慧，在此設置了兩種電腦，分為Type A和Type B。 
@@ -432,20 +890,26 @@ Type B，是使用maxn演算法的電腦。在此我們假設我們知道所有�
  電腦一 電腦二 電腦三 電腦四 
 分數 -344 22 246 -124 
 勝場 241 250 260 249 
- 
 
- 
-15 
+
+Page Range: (22, 23)
+
+Line Range: (418, 435)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 48: 
+
+Text: 
+
  由表一中可以看出四個電腦彼此勝率是差不多的，表示勝負應該完全是靠
 手牌的好壞而定。 
 表二是將第四家電腦使用Type B ，其餘電腦使用Type A的比賽的結果。(後
 面括號後的數字表示使用maxn 時搜尋的最大深度。) 
- 
 表格 2三個Type A和一個Type B(搜尋深度6)電腦的比賽結果。 
  電腦一 電腦二 電腦三 電腦四(6) 
 分數 -954 -208 -50 1212 
 勝場 213 228 251 308 
- 
 由表中可以看出，在同樣的一千場中，電腦四的勝率跟分數皆大幅提升，
 可得知Type B的電腦應該比Type A的強度高許多。但若要因此判定maxn演算法
 就是比普通使用固定規則的電腦來得強，也言之過早，因為我們其實還可以在
@@ -456,9 +920,17 @@ Type B，是使用maxn演算法的電腦。在此我們假設我們知道所有�
 考慮到出牌時若是被其他玩家蓋過的後果，所以表示其他玩家的出牌不太會影
 響自己的出牌。如此一來，似乎也就失去了搜尋其他玩家出牌的意義。
 
+
+Page Range: (23, 24)
+
+Line Range: (436, 458)
+
+Filename: data/game.pdf
+-----------------------
+Chunk 49: 
+
+Text: 
  
-16 
-  
 ###第五章  結論 
 本次實驗中，我們發現只要簡單的設置審局函數對所有可以出的牌做分數
 的搜尋來決定策略，其效果即可比普通規則化的電腦的強度好許多。 
@@ -470,3 +942,10 @@ Type B，是使用maxn演算法的電腦。在此我們假設我們知道所有�
 算法的電腦AI之外，也可以試著加入對手模組，藉由強化學習做出更好的判
 斷。Monte-Carlo的模擬決策搜尋也可以試著實做出來，尤其在不完全資訊的
 遊戲裡它有它獨特的優點。 
+
+
+Page Range: (24, 24)
+
+Line Range: (462, 472)
+
+Filename: data/game.pdf
