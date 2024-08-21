@@ -1,7 +1,6 @@
 # RAG pdf processor
 ## Intro
 This repository is used for processing pdf for RAG
-
 ---
 
 
@@ -35,8 +34,16 @@ Filename without extension like "report" or "game"
 List of pages, each page is a dictionary, contains the following keys
         - `text(str)` : content of the page
         - `metadata(dict)` : dictionary contains file_path, and page(page number) 
-    
 
+### `with_pymupdf.py`
+* `pdf_to_markdown(filename) -> md_pages`
+    - `filename(str)` :
+Filename without extension like "report" or "game"
+    - `md_pages(List[dict])` :
+List of pages, each page is a dictionary, contains the following keys
+        - `text(str)` : content of the page
+        - `metadata(dict)` : dictionary contains file_path, and page(page number) 
+    
 ---
 
 ## `chunkers`
