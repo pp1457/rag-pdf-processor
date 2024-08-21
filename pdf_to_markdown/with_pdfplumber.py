@@ -109,7 +109,6 @@ def add_hash_to_header_lines(lines, line_metadatas, header_sizes):
                     "file_path": line_metadatas[i]["file_path"],
                     "page": last_page
                 },
-                "line_id": line_metadatas[i]["line_id"]
             })
             page_content = ""
 
