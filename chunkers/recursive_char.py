@@ -1,7 +1,7 @@
 import pdfplumber
 from typing import List
 from pdf_to_markdown.with_pdfplumber import extract_lines
-from tools.write_to_csv import write_to_csv
+from tools.save_result import save_result
 
 def split(chars, split_character):
     result = []
@@ -22,7 +22,7 @@ def content(chars):
     return output
 
 
-def recursive_char(chars, split_characters, chunk_size, overlap):
+def recursive_char(chars: List[dict], split_characters: List[str], chunk_size, overlap):
 
     tmp_chunks = []
 
@@ -35,16 +35,17 @@ def recursive_char(chars, split_characters, chunk_size, overlap):
     output = []
 
     for tmp_chunk in tmp_chunks:
+
         combine_chunk = last_overlap + tmp_chunk 
+
         if overlap < len(tmp_chunk):
             last_overlap = tmp_chunk[len(tmp_chunk) - overlap: len(tmp_chunk)]
         else:
             last_overlap = []
             overlap = 0
 
-        # print(type(combine_chunk))
-
         tmp_result = recursive_char(combine_chunk, split_characters[1:], chunk_size, overlap)
+
         for final_chunk in tmp_result:
             output.append(final_chunk)
 
@@ -52,6 +53,7 @@ def recursive_char(chars, split_characters, chunk_size, overlap):
     
 
 def split_empty_lines(lines, line_metadatas):
+
     new_lines = []
     new_metadatas = []
     empty_line_count = 0
@@ -59,20 +61,19 @@ def split_empty_lines(lines, line_metadatas):
     for line_id, line in enumerate(lines):
         if line.strip() == "":
             empty_line_count += 1
+            if empty_line_count == 2:
+                empty_line_count = -10000000
+                new_lines.append("")
+                new_metadatas.append(line_metadatas[line_id])
         else:
             empty_line_count = 0
-
-        if empty_line_count == 2:
-            empty_line_count = -10000000
-            new_lines.append("")
-            new_metadatas.append(line_metadatas[line_id])  # Keep the metadata in sync
-        if line.strip() != "":
             new_lines.append(line)
             new_metadatas.append(line_metadatas[line_id])
 
     return new_lines, new_metadatas
 
 def transform_to_chunk(chars):
+    """ transform from chars to chunks """
     text = ""
 
     for char in chars:
@@ -88,16 +89,12 @@ def transform_to_chunk(chars):
     return final_chunk
     
 
-def split_text(lines, line_metadatas, split_characters):
-    """ add hash to header lines """
+def split_text(lines: List[str], line_metadatas: List[dict], split_characters: List[str], split_empty_line, chunk_size, overlap):
+    """ split text by recursive char """
 
-    split_empty = input("Split empty line? (Y/n) ")
-    chunk_size = int(input("Chunk Size: "))
-    overlap = int(input("Overlap Size: "))
-
-    if split_empty != "n":
+    if split_empty_line != "n":
         lines, line_metadatas = split_empty_lines(lines, line_metadatas)
-        split_characters = [''] + split_characters
+        split_characters = [""] + split_characters
 
 
     page_content = ""
@@ -117,8 +114,6 @@ def split_text(lines, line_metadatas, split_characters):
 
     split_results = recursive_char(all_chars, split_characters, chunk_size, overlap)
 
-    # print(split_results)
-
     chunks = []
 
     for chunk in split_results:
@@ -128,41 +123,20 @@ def split_text(lines, line_metadatas, split_characters):
 
 
 def main():
+    """ main """
+
     filename = input("File Name: ")
     input_file = "data/" + filename + ".pdf"
+
     lines, line_metadatas, header_sizes = extract_lines(input_file)
-    final_chunks = split_text(lines, line_metadatas, ["。", "\n", "，", " "])
 
-    chunk_id = 0
+    split_empty_line = input("Split empty line? (Y/n) ")
+    chunk_size = int(input("Chunk Size: "))
+    overlap = int(input("Overlap Size: "))
 
-    with open("output.txt", "w", encoding="utf-8") as file:
-        fields = ["Chunk ID", "Text", "Page Range", "Line Range", "Filename"]
-        rows = []
-        
-        for chunk in final_chunks:
-            chunk_id += 1
-            row = []
+    final_chunks = split_text(lines, line_metadatas, ["。", "\n", "，", " "], split_empty_line, chunk_size, overlap)
 
-            file.write("\n-----------------------\n")
-            row.append(chunk_id)
-            row.append(chunk["text"])
-            row.append(chunk["page_range"])
-            row.append(chunk["line_range"])
-            row.append(chunk["filename"])
-
-            rows.append(row)
-
-            file.write(f"Chunk {chunk_id}: \n\n")
-            file.write("Text: \n")
-            file.write(chunk["text"])
-            file.write("\n\nPage Range: ")
-            file.write(str(chunk["page_range"]))
-            file.write("\n\nLine Range: ")
-            file.write(str(chunk["line_range"]))
-            file.write("\n\nFilename: ")
-            file.write(str(chunk["filename"]))
-
-        write_to_csv(f"csv/{filename}.csv", fields, rows)
+    save_result(final_chunks, "recursive_char", filename)
 
 
 if __name__ == "__main__":
