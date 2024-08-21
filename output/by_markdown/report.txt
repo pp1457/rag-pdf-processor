@@ -1,34 +1,19 @@
-
------------------------
-Chunk 1: 
-
 Text: 
-
-
 Page Range: (1, 1)
-
 Line Range: (1, 2)
-
 Filename: data/report.pdf
------------------------
-Chunk 2: 
 
-Text: 
- 
+-----------------------
+Text:  
 ###結合雲端分散儲存與搜尋引擎之影音網站 
 Video Website with Cloud Distributed Storage and Search Engine 
 
-
 Page Range: (1, 1)
-
 Line Range: (4, 6)
-
 Filename: data/report.pdf
------------------------
-Chunk 3: 
 
-Text: 
- 
+-----------------------
+Text:  
 963847 駱彥呈 
 963808 李哲成 
 963871 梁峻瑞 
@@ -51,17 +36,12 @@ Tunghai University, 40704 Taichung, Taiwan R.O.C.
 九、未來展望  ................................................................................................... 49 
 十、參考資料及網站  ................................................................................... 49 
 
-
 Page Range: (2, 2)
-
 Line Range: (22, 33)
-
 Filename: data/report.pdf
------------------------
-Chunk 4: 
 
-Text: 
- 
+-----------------------
+Text:  
  一、摘要 
 近年來由於全球網路頻寬的提升，大家開始可以互相分享較大的影音檔案，
 加上雲端運算與儲存的普及，影音網站變得相當熱門。本專題將雲端運算中的
@@ -129,17 +109,12 @@ Lighttpd（發音為lighty）是一套開放原始碼的網頁伺服器，以BSD
 釋出。相較於其他的網頁伺服器，lighttpd僅需少量的記憶體及CPU資源即可達
  到同樣的效能。 
 
-
 Page Range: (2, 5)
-
 Line Range: (34, 118)
-
 Filename: data/report.pdf
------------------------
-Chunk 5: 
 
-Text: 
- 
+-----------------------
+Text:  
 特色： 
  提供FastCGI及SCGI的負載平衡 
  支援chroot 
@@ -273,17 +248,12 @@ Crawlzilla的原理大致相同，而Crawlzilla的安裝和設定比較平易近
  1.一般FFmpeg 
 2. FFmpeg-mt 
 
-
 Page Range: (5, 10)
-
 Line Range: (119, 267)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 6: 
-
 Text: 
-
  我們發現相較於一般FFmpeg，同時間只有單核心獨自運行，一段時間後才
 交換工作，FFmpeg-mt在轉檔過程中可多執行緒同時運作，測詴結果確實符合我
 們的預期。 
@@ -308,45 +278,30 @@ Nutch搜尋引擎經過修改後，則需要測詴搜尋結果是否受到影響
 印象，做為我們影音網站的特色。如此，結合雲端分散儲存與搜尋引擎之影音網
 站即大功告成。 
 
-
 Page Range: (10, 11)
-
 Line Range: (268, 294)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 7: 
-
 Text: 
-
  五、系統架構與設計 
 (一)整體網頁架構： 
 
-
 Page Range: (11, 11)
-
 Line Range: (295, 299)
-
 Filename: data/report.pdf
------------------------
-Chunk 8: 
 
-Text: 
- 
+-----------------------
+Text:  
 有超連結 
 私下傳遞 
 
-
 Page Range: (11, 11)
-
 Line Range: (300, 303)
-
 Filename: data/report.pdf
------------------------
-Chunk 9: 
 
-Text: 
- 
+-----------------------
+Text:  
  login.php index.php conn.php 
 chkid.php phpmailer.php data.php 
 loginchk.php 
@@ -377,31 +332,21 @@ editinfo.php 修改影片資訊
 delvideo.php 刪除影片 search.jsp 搜尋頁 
  (二)影片觀看簡易流程架構： 
 
-
 Page Range: (11, 12)
-
 Line Range: (304, 365)
-
 Filename: data/report.pdf
------------------------
-Chunk 10: 
 
-Text: 
- 
+-----------------------
+Text:  
 （三）伺服器系統架構 
 （四）Nutch 架構 
 
-
 Page Range: (12, 12)
-
 Line Range: (366, 378)
-
 Filename: data/report.pdf
------------------------
-Chunk 11: 
 
-Text: 
-   
+-----------------------
+Text:    
 MySQL FFmpeg Website(Application) 
  Hardware Nutch(Hadoop) Lighttpd Tomcat 
 HDFS-Fuse 
@@ -434,17 +379,12 @@ automake
 php5-cgi 
 php5-mysql 
 
-
 Page Range: (12, 13)
-
 Line Range: (379, 419)
-
 Filename: data/report.pdf
------------------------
-Chunk 12: 
 
-Text: 
- 
+-----------------------
+Text:  
 Lighttpd 上安裝 Mod-H264 Streaming Module 
 cd /lighttpd 
 sudo wget 
@@ -506,127 +446,77 @@ sudo gedit /var/lighttpd/logs/lighttpd.breakage.log (建立檔案，頇
 gedit /tests/lighttpd.conf 
 在開啟的lighttpd.conf中全選並貼上以下敘述來取代原先的敘述(IP位址需修改)： 
 
-
 Page Range: (13, 15)
-
 Line Range: (420, 490)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 13: 
-
-Text: 
-# lighttpd configuration file 
-
+Text: # lighttpd configuration file 
 
 Page Range: (15, 15)
-
 Line Range: (491, 491)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 14: 
-
-Text: 
-# 
-
+Text: # 
 
 Page Range: (15, 15)
-
 Line Range: (492, 492)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 15: 
-
-Text: 
-# use it as a base for lighttpd 1.0.0 and above 
-
+Text: # use it as a base for lighttpd 1.0.0 and above 
 
 Page Range: (15, 15)
-
 Line Range: (493, 493)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 16: 
-
-Text: 
-# 
-
+Text: # 
 
 Page Range: (15, 15)
-
 Line Range: (494, 494)
-
 Filename: data/report.pdf
------------------------
-Chunk 17: 
 
-Text: 
-# $Id: lighttpd.conf,v 1.7 2004/11/03 22:26:05 weigon Exp $ 
+-----------------------
+Text: # $Id: lighttpd.conf,v 1.7 2004/11/03 22:26:05 weigon Exp $ 
  Options you really have to take care of 
 
-
 Page Range: (15, 15)
-
 Line Range: (495, 498)
-
 Filename: data/report.pdf
------------------------
-Chunk 18: 
 
-Text: 
- 
+-----------------------
+Text:  
 ## modules to load 
 
-
 Page Range: (15, 15)
-
 Line Range: (500, 500)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 19: 
-
-Text: 
-# at least mod_access and mod_accesslog should be loaded 
-
+Text: # at least mod_access and mod_accesslog should be loaded 
 
 Page Range: (15, 15)
-
 Line Range: (501, 501)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 20: 
-
-Text: 
-# all other module should only be loaded if really neccesary 
-
+Text: # all other module should only be loaded if really neccesary 
 
 Page Range: (15, 15)
-
 Line Range: (502, 502)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 21: 
-
-Text: 
-# - saves some time 
-
+Text: # - saves some time 
 
 Page Range: (15, 15)
-
 Line Range: (503, 503)
-
 Filename: data/report.pdf
------------------------
-Chunk 22: 
 
-Text: 
-# - saves memory 
+-----------------------
+Text: # - saves memory 
 server.modules              = ( 
                    … 
            "mod_h264_streaming", 
@@ -635,178 +525,113 @@ server.modules              = (
 …(中間省略) 
 … 
 
-
 Page Range: (15, 16)
-
 Line Range: (504, 513)
-
 Filename: data/report.pdf
------------------------
-Chunk 23: 
 
-Text: 
-# mimetype mapping 
+-----------------------
+Text: # mimetype mapping 
 mimetype.assign             = ( 
   … 
   ".css"          =>      "text/css", 
   … 
 
-
 Page Range: (16, 16)
-
 Line Range: (514, 518)
-
 Filename: data/report.pdf
------------------------
-Chunk 24: 
 
-Text: 
-  # default mime type 
+-----------------------
+Text:   # default mime type 
   ""              =>      "application/octet-stream", 
  ) 
 … 
  Options that are good to be but not neccesary to be changed 
 ## 64 Mbyte ... nice limit 
 
-
 Page Range: (16, 16)
-
 Line Range: (525, 525)
-
 Filename: data/report.pdf
------------------------
-Chunk 25: 
 
-Text: 
-#server.max-request-size = 65000 
+-----------------------
+Text: #server.max-request-size = 65000 
 ## bind to port (default: 80) 
 server.port                = 80 
 
-
 Page Range: (16, 16)
-
 Line Range: (528, 530)
-
 Filename: data/report.pdf
------------------------
-Chunk 26: 
 
-Text: 
-#server.max-request-size = 65000 
+-----------------------
+Text: #server.max-request-size = 65000 
 ## bind to localhost (default: all interfaces) 
 server.bind                = "192.168.xxx.xxx"  (此處請修改為自己主機
 的IP) 
 …(中間省略) 
  proxy module 
 
-
 Page Range: (16, 16)
-
 Line Range: (531, 535)
-
 Filename: data/report.pdf
------------------------
-Chunk 27: 
 
-Text: 
-#server.max-request-size = 65000 
+-----------------------
+Text: #server.max-request-size = 65000 
 ## read proxy.txt for more info 
 
-
 Page Range: (16, 16)
-
 Line Range: (536, 536)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 28: 
-
-Text: 
-#proxy.server               = ( ".php" => 
-
+Text: #proxy.server               = ( ".php" => 
 
 Page Range: (16, 16)
-
 Line Range: (537, 537)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 29: 
-
-Text: 
-#                               ( "localhost" => 
-
+Text: #                               ( "localhost" => 
 
 Page Range: (16, 16)
-
 Line Range: (538, 538)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 30: 
-
-Text: 
-#                                 ( 
-
+Text: #                                 ( 
 
 Page Range: (16, 16)
-
 Line Range: (539, 539)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 31: 
-
-Text: 
-#                                   "host" => "192.168.0.101", 
-
+Text: #                                   "host" => "192.168.0.101", 
 
 Page Range: (16, 16)
-
 Line Range: (540, 540)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 32: 
-
-Text: 
-#                                   "port" => 80 
-
+Text: #                                   "port" => 80 
 
 Page Range: (16, 16)
-
 Line Range: (541, 541)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 33: 
-
-Text: 
-#                                 ) 
-
+Text: #                                 ) 
 
 Page Range: (16, 16)
-
 Line Range: (542, 542)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 34: 
-
-Text: 
-#                               ) 
-
+Text: #                               ) 
 
 Page Range: (16, 16)
-
 Line Range: (543, 543)
-
 Filename: data/report.pdf
------------------------
-Chunk 35: 
 
-Text: 
-#                             ) 
+-----------------------
+Text: #                             ) 
 …(以下省略) 
 … 
  接著修改php設定檔(以下步驟頇針對自己主機的記憶體大小作修改)  
@@ -814,69 +639,44 @@ sudo gedit /etc/php5/cgi/php.ini
 修改上傳暫存資料夾路徑及最大上傳檔案大小： 
 輸入自己主機的記憶體大小： 
 
-
 Page Range: (16, 17)
-
 Line Range: (544, 555)
-
 Filename: data/report.pdf
------------------------
-Chunk 36: 
 
-Text: 
- 
+-----------------------
+Text:  
  修改最大傳輸檔案大小： 
 
-
 Page Range: (17, 18)
-
 Line Range: (556, 561)
-
 Filename: data/report.pdf
------------------------
-Chunk 37: 
 
-Text: 
- 
+-----------------------
+Text:  
 修改timeout的時間(上傳超過這個時間就會失敗)： 
 
-
 Page Range: (18, 19)
-
 Line Range: (562, 564)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 38: 
-
 Text: 
-
 修改maxlifetime的時間(用來控制session連線時間)： 
 
-
 Page Range: (19, 19)
-
 Line Range: (565, 569)
-
 Filename: data/report.pdf
------------------------
-Chunk 39: 
 
-Text: 
- 
+-----------------------
+Text:  
 如發生錯誤請檢查output_buffering的設定： 
 
-
 Page Range: (19, 19)
-
 Line Range: (570, 572)
-
 Filename: data/report.pdf
------------------------
-Chunk 40: 
 
-Text: 
- 
+-----------------------
+Text:  
  建立pages資料夾（此資料夾將用來存放網頁原始碼，名稱路徑可自定）： 
 sudo mkdir -p /var/lighttpd/servers/www.example.org/pages 
 由於剛剛在/var底下建立的 /lighttpd/pages資料夾是root權限，需要使用下列的
@@ -888,31 +688,21 @@ sudo chown -R 使用者名稱 /var/lighttpd  //改變 log owner
 安裝MySQL相關套件： 
 sudo apt-get install mysql-server mysql-client 
 
-
 Page Range: (19, 20)
-
 Line Range: (573, 590)
-
 Filename: data/report.pdf
------------------------
-Chunk 41: 
 
-Text: 
- 
+-----------------------
+Text:  
 MySQL密碼設定： 
 (為了讓我們在開發期間方便修改內容，暫時先把密碼設為123456)  
 
-
 Page Range: (20, 20)
-
 Line Range: (591, 594)
-
 Filename: data/report.pdf
------------------------
-Chunk 42: 
 
-Text: 
- 
+-----------------------
+Text:  
  安裝phpMyAdmin網頁型資料庫管理： 
 到http://www.phpmyadmin.net/home_page/downloads.php下載
 phpMyAdmin-3.3.5.1-all-languages.tar.gz套件，下載完後解壓縮，並把到解壓縮後
@@ -924,17 +714,12 @@ cd /var/lighttpd/servers/www.example.org/pages/phpMyAdmin
 cp config.sample.inc.php config.inc.php 
 修改phpMyAdmin 資料夾中的config.inc.php設定檔： 
 
-
 Page Range: (20, 21)
-
 Line Range: (595, 609)
-
 Filename: data/report.pdf
------------------------
-Chunk 43: 
 
-Text: 
- 
+-----------------------
+Text:  
 執行MySQL： 
 sudo /etc/init.d/mysql start 
 執行測詴lighpptd： 
@@ -945,58 +730,38 @@ $ sudo ./lighttpd -D -f
 網址輸入http://自己主機的IP位址/phpMyAdmin(即先前解壓縮修改的資料夾名
 稱)/  
 
-
 Page Range: (21, 22)
-
 Line Range: (610, 621)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 44: 
-
 Text: 
-
  (可先將語言(Language)改為繁體中文，方便管理與對照說明) 
 
-
 Page Range: (22, 22)
-
 Line Range: (622, 625)
-
 Filename: data/report.pdf
------------------------
-Chunk 45: 
 
-Text: 
- 
+-----------------------
+Text:  
 建立資料庫 
 建立新web資料庫： 
 校對選擇utf8_unicode_ci，設定完後點選『建立』 
 
-
 Page Range: (22, 22)
-
 Line Range: (626, 630)
-
 Filename: data/report.pdf
------------------------
-Chunk 46: 
 
-Text: 
- 
+-----------------------
+Text:  
 新增資料表video（存放影片資料） 
 
-
 Page Range: (22, 23)
-
 Line Range: (631, 633)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 47: 
-
 Text: 
-
  v_id:影片id，使用現在時間加上亂數所組成的16進位數字作為影片id代號 
 v_title:影片名稱，由使用者輸入 
 v_text:影片簡介，由使用者輸入 
@@ -1027,17 +792,12 @@ PRIMARY KEY (  `v_id` )
 ) ENGINE = MYISAM ; 
  新增資料表login_info （存放會員資料） 
 
-
 Page Range: (23, 24)
-
 Line Range: (634, 668)
-
 Filename: data/report.pdf
------------------------
-Chunk 48: 
 
-Text: 
- 
+-----------------------
+Text:  
 ID:流水編號 
 u_id:帳號 
 u_pwd:密碼，存入時有加密 
@@ -1091,17 +851,12 @@ u_report: 檢舉者的帳號，會員才可以進行檢舉，每位會員只能�
 舉一次 
 i_time:檢舉的時間註記 
 
-
 Page Range: (24, 27)
-
 Line Range: (669, 734)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 49: 
-
 Text: 
-
  CREATE TABLE  `web`.`inappropriate` ( 
 `v_id` VARCHAR( 12 ) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL , 
 `u_report` VARCHAR( 255 ) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT 
@@ -1165,17 +920,12 @@ sudo make install
 ffmpeg 
 出現類似下面的圖案就表示成功了 
 
-
 Page Range: (27, 29)
-
 Line Range: (735, 810)
-
 Filename: data/report.pdf
------------------------
-Chunk 50: 
 
-Text: 
- 
+-----------------------
+Text:  
 (5)安裝Nutch 
 Nutch1.1安裝 
 cd /opt 
@@ -1326,17 +1076,12 @@ Larger
 <!--<property> 
  <name>urlfilter.order</name>  
 
-
 Page Range: (29, 34)
-
 Line Range: (811, 982)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 51: 
-
 Text: 
-
  <value>org.apache.nutch.urlfilter.regex.RegexURLFilter</value
 >  
   <description>The order by which url filters are applied.  
@@ -1361,71 +1106,46 @@ depending
 gedit conf/crawl-urlfilter.txt 
 修改內容 
 
-
 Page Range: (34, 34)
-
 Line Range: (983, 1008)
-
 Filename: data/report.pdf
------------------------
-Chunk 52: 
 
-Text: 
-# skip  ftp:, & mailto: urls 
+-----------------------
+Text: # skip  ftp:, & mailto: urls 
 -^(ftp|mailto): 
 
-
 Page Range: (34, 34)
-
 Line Range: (1009, 1010)
-
 Filename: data/report.pdf
------------------------
-Chunk 53: 
 
-Text: 
-# skip image and other suffixes we can't yet parse 
+-----------------------
+Text: # skip image and other suffixes we can't yet parse 
 -\.(gif|GIF|jpg|JPG|png|PNG|ico|ICO|css|sit|eps|wmf|mpg|xls|g
 z|rpm|tgz|mov|MOV|exe|jpeg|JPEG|bmp|BMP)$ 
 
-
 Page Range: (34, 34)
-
 Line Range: (1011, 1013)
-
 Filename: data/report.pdf
------------------------
-Chunk 54: 
 
-Text: 
-# skip URLs containing certain characters as probable queries, 
+-----------------------
+Text: # skip URLs containing certain characters as probable queries, 
 etc. 
 -[*!@] 
 
-
 Page Range: (34, 34)
-
 Line Range: (1014, 1016)
-
 Filename: data/report.pdf
------------------------
-Chunk 55: 
 
-Text: 
-# accept hosts in MY.DOMAIN.NAME 
+-----------------------
+Text: # accept hosts in MY.DOMAIN.NAME 
 +^http://([a-z0-9]*\.)*.*/ 
 
-
 Page Range: (34, 34)
-
 Line Range: (1017, 1018)
-
 Filename: data/report.pdf
------------------------
-Chunk 56: 
 
-Text: 
-# accecpt anything else 
+-----------------------
+Text: # accecpt anything else 
 +.* 
 將相關文件複製到其他主機，形成叢集(複製完畢後，也要修改/opt/nutch/和
 /var/nutch-hadoop權限，參考文件前面語法) 
@@ -1464,32 +1184,22 @@ bin/nutch crawl urls -dir search -threads 2 -depth 2 -topN 1000
 如出現Error: JAVA_HOME is not set. 修改下面設定：修改環境變數設定檔 
 sudo gedit /etc/bash.bashrc 
 
-
 Page Range: (34, 36)
-
 Line Range: (1019, 1068)
-
 Filename: data/report.pdf
------------------------
-Chunk 57: 
 
-Text: 
-#set java environment 
+-----------------------
+Text: #set java environment 
 JAVA_HOME=/lib/jdk1.6.0_21 
 …(中間省略) 
 export  JAVA_HOME 
 
-
 Page Range: (36, 36)
-
 Line Range: (1069, 1073)
-
 Filename: data/report.pdf
------------------------
-Chunk 58: 
 
-Text: 
- 
+-----------------------
+Text:  
 bin/hadoop dfs -get search /tmp/search 
 sudo gedit 
 /opt/tomcat/webapps/nutch-1.1/WEB-INF/classes/nutch-site.xml 
@@ -1507,57 +1217,37 @@ bin/hadoop fs -rmr urls
 rm -rf /tmp/search/* 
 (六)安裝FUSE 
 
-
 Page Range: (36, 36)
-
 Line Range: (1074, 1093)
-
 Filename: data/report.pdf
------------------------
-Chunk 59: 
 
-Text: 
-# sudo vim /etc/apt/sources.list 
+-----------------------
+Text: # sudo vim /etc/apt/sources.list 
 加入 
 deb http://us.archive.ubuntu.com/ubuntu/ jaunty multiverse 
 deb http://us.archive.ubuntu.com/ubuntu/ jaunty-updates  
 
-
 Page Range: (36, 36)
-
 Line Range: (1094, 1097)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 60: 
-
-Text: 
-# sudo apt-get update 
-
+Text: # sudo apt-get update 
 
 Page Range: (36, 36)
-
 Line Range: (1098, 1098)
-
 Filename: data/report.pdf
------------------------
-Chunk 61: 
 
-Text: 
-# sudo apt-get install subversion ant automake sun-java5-jdk 
+-----------------------
+Text: # sudo apt-get install subversion ant automake sun-java5-jdk 
 sun-java6-jdk 
 
-
 Page Range: (36, 36)
-
 Line Range: (1099, 1101)
-
 Filename: data/report.pdf
------------------------
-Chunk 62: 
 
-Text: 
-# sudo vim ~/.bashrc 
+-----------------------
+Text: # sudo vim ~/.bashrc 
  加入  //請依自己電腦套件的路徑跟位置作修改 
 export JAVA_HOME=/usr/lib/jvm/java-6-sun 
 export OS_NAME=linux 
@@ -1567,143 +1257,88 @@ export FUSE_HOME=/opt/app/fuse
 export PATH=$PATH:$HADOOP_HOME/build/contrib/fuse-dfs 
 儲存離開 
 
-
 Page Range: (36, 37)
-
 Line Range: (1102, 1113)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 63: 
-
-Text: 
-# source ~/.bashrc 
-
+Text: # source ~/.bashrc 
 
 Page Range: (37, 37)
-
 Line Range: (1114, 1114)
-
 Filename: data/report.pdf
------------------------
-Chunk 64: 
 
-Text: 
-# sudo vim /boot/config-2.6.32-24-generic 
+-----------------------
+Text: # sudo vim /boot/config-2.6.32-24-generic 
 加入 
 CONFIG_FUSE_FS=y instead CONFIG_FUSE_FS=m 
 
-
 Page Range: (37, 38)
-
 Line Range: (1115, 1118)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 65: 
-
 Text: 
-
  安裝hadoop-0.20.2 確定啟動成功，再關閉 
 
-
 Page Range: (38, 38)
-
 Line Range: (1119, 1122)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 66: 
-
-Text: 
-# cd $HADOOP_HOME    
-
+Text: # cd $HADOOP_HOME    
 
 Page Range: (38, 38)
-
 Line Range: (1123, 1123)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 67: 
-
-Text: 
-# ant clean 
-
+Text: # ant clean 
 
 Page Range: (38, 38)
-
 Line Range: (1124, 1124)
-
 Filename: data/report.pdf
------------------------
-Chunk 68: 
 
-Text: 
-# ant compile-c++-libhdfs -Dlibhdfs=1 
+-----------------------
+Text: # ant compile-c++-libhdfs -Dlibhdfs=1 
 安裝forrest-0.8 
 
-
 Page Range: (38, 38)
-
 Line Range: (1125, 1127)
-
 Filename: data/report.pdf
------------------------
-Chunk 69: 
 
-Text: 
-# wget 
+-----------------------
+Text: # wget 
 http://apache.ntu.edu.tw//forrest/apache-forrest-0.8.tar.gz 
 
-
 Page Range: (38, 38)
-
 Line Range: (1128, 1129)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 70: 
-
-Text: 
-# tar zxf apache-forrest-0.8.tar.gz 
-
+Text: # tar zxf apache-forrest-0.8.tar.gz 
 
 Page Range: (38, 38)
-
 Line Range: (1130, 1130)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 71: 
-
-Text: 
-# chmod +x apache-forrest-0.8/bin/forrest 
-
+Text: # chmod +x apache-forrest-0.8/bin/forrest 
 
 Page Range: (38, 38)
-
 Line Range: (1131, 1131)
-
 Filename: data/report.pdf
------------------------
-Chunk 72: 
 
-Text: 
-# cd /opt/hadoop 
+-----------------------
+Text: # cd /opt/hadoop 
 修改build.xml 否則無法ant 
 
-
 Page Range: (38, 38)
-
 Line Range: (1132, 1134)
-
 Filename: data/report.pdf
------------------------
-Chunk 73: 
 
-Text: 
-# sudo gedit build.xml 
+-----------------------
+Text: # sudo gedit build.xml 
 第1059行 
 改成<target name="package" depends="compile, jar, examples, tools-jar, jar-test, 
 ant-tasks, package-librecordio" 
@@ -1714,397 +1349,242 @@ ant-tasks, package-librecordio"
 </copy> 
 儲存離開 
 
-
 Page Range: (38, 38)
-
 Line Range: (1135, 1146)
-
 Filename: data/report.pdf
------------------------
-Chunk 74: 
 
-Text: 
-# ant package -Djava5.home=/usr/lib/jvm/java-1.5.0-sun 
+-----------------------
+Text: # ant package -Djava5.home=/usr/lib/jvm/java-1.5.0-sun 
 -Dforrest.home=$(pwd)/apache-forrest-0.8 
 
-
 Page Range: (38, 38)
-
 Line Range: (1147, 1149)
-
 Filename: data/report.pdf
------------------------
-Chunk 75: 
 
-Text: 
- 
+-----------------------
+Text:  
 下載fuse-2.8.5.tar.gz 
 http://sourceforge.net/projects/fuse/files/fuse-2.X/2.8.5/fuse
 -2.8.5.tar.gz/download 
 
-
 Page Range: (38, 38)
-
 Line Range: (1150, 1154)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 76: 
-
-Text: 
-# tar zxf fuse-2.8.5.tar.gz 
-
+Text: # tar zxf fuse-2.8.5.tar.gz 
 
 Page Range: (38, 38)
-
 Line Range: (1155, 1155)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 77: 
-
-Text: 
-# cd fuse-2.8.5 
-
+Text: # cd fuse-2.8.5 
 
 Page Range: (38, 38)
-
 Line Range: (1156, 1156)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 78: 
-
-Text: 
-# mkdir -p /opt/app/fuse;./configure --prefix=/opt/app/fuse 
-
+Text: # mkdir -p /opt/app/fuse;./configure --prefix=/opt/app/fuse 
 
 Page Range: (38, 38)
-
 Line Range: (1157, 1157)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 79: 
-
-Text: 
-# make -j2 
-
+Text: # make -j2 
 
 Page Range: (38, 39)
-
 Line Range: (1158, 1160)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 80: 
-
-Text: 
- # make install 
-
+Text:  # make install 
 
 Page Range: (39, 39)
-
 Line Range: (1161, 1161)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 81: 
-
-Text: 
-# modprobe fuse 
-
+Text: # modprobe fuse 
 
 Page Range: (39, 39)
-
 Line Range: (1162, 1163)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 82: 
-
-Text: 
-# cd $HADOOP_HOME 
-
+Text: # cd $HADOOP_HOME 
 
 Page Range: (39, 39)
-
 Line Range: (1164, 1164)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 83: 
-
-Text: 
-# ant compile -Dcompile.c++=true -Dlibhdfs=true （在hadoop目錄下） 
-
+Text: # ant compile -Dcompile.c++=true -Dlibhdfs=true （在hadoop目錄下） 
 
 Page Range: (39, 39)
-
 Line Range: (1165, 1165)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 84: 
-
-Text: 
-# ant package 
-
+Text: # ant package 
 
 Page Range: (39, 39)
-
 Line Range: (1166, 1166)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 85: 
-
-Text: 
-# cd build 
-
+Text: # cd build 
 
 Page Range: (39, 39)
-
 Line Range: (1167, 1167)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 86: 
-
-Text: 
-# mkdir libhdfs 
-
+Text: # mkdir libhdfs 
 
 Page Range: (39, 39)
-
 Line Range: (1168, 1168)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 87: 
-
-Text: 
-# cp build/c++/Linux-i386-32/lib/* $HADOOP_HOME/build/libhdfs 
-
+Text: # cp build/c++/Linux-i386-32/lib/* $HADOOP_HOME/build/libhdfs 
 
 Page Range: (39, 39)
-
 Line Range: (1169, 1169)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 88: 
-
-Text: 
-# ant compile-contrib -Dlibhdfs=1 -Dfusedfs=1 
-
+Text: # ant compile-contrib -Dlibhdfs=1 -Dfusedfs=1 
 
 Page Range: (39, 39)
-
 Line Range: (1170, 1171)
-
 Filename: data/report.pdf
------------------------
-Chunk 89: 
 
-Text: 
-# gedit /etc/ld.so.conf 
+-----------------------
+Text: # gedit /etc/ld.so.conf 
 加入 
 /usr/lib/jvm/java-6-openjdk/jre/lib/amd64/server/ 
 /usr/local/lib/ 
 
-
 Page Range: (39, 39)
-
 Line Range: (1172, 1176)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 90: 
-
-Text: 
- 
-
+Text:  
 
 Page Range: (39, 39)
-
 Line Range: (1177, 1177)
-
 Filename: data/report.pdf
------------------------
-Chunk 91: 
 
-Text: 
-# ldconfig 
+-----------------------
+Text: # ldconfig 
 啟動hadoop 
 
-
 Page Range: (39, 39)
-
 Line Range: (1178, 1181)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 92: 
-
-Text: 
-# cd $HADOOP_HOME 
-
+Text: # cd $HADOOP_HOME 
 
 Page Range: (39, 40)
-
 Line Range: (1182, 1184)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 93: 
-
-Text: 
- # cd build/contrib/fuse-dfs 
-
+Text:  # cd build/contrib/fuse-dfs 
 
 Page Range: (40, 40)
-
 Line Range: (1185, 1185)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 94: 
-
-Text: 
-# chmod +x fuse_dfs_wrapper.sh 
-
+Text: # chmod +x fuse_dfs_wrapper.sh 
 
 Page Range: (40, 40)
-
 Line Range: (1186, 1186)
-
 Filename: data/report.pdf
------------------------
-Chunk 95: 
 
-Text: 
-# mkdir /var/hdfs 
+-----------------------
+Text: # mkdir /var/hdfs 
 修改fuse_dfs_wrapper.sh文件 
 
-
 Page Range: (40, 40)
-
 Line Range: (1187, 1189)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 96: 
-
-Text: 
-# gedit fuse_dfs_wrapper.sh 
-
+Text: # gedit fuse_dfs_wrapper.sh 
 
 Page Range: (40, 40)
-
 Line Range: (1190, 1191)
-
 Filename: data/report.pdf
------------------------
-Chunk 97: 
 
-Text: 
-# ./ fuse_dfs_wrapper.sh 
+-----------------------
+Text: # ./ fuse_dfs_wrapper.sh 
 出現 下圖表示成功 
 
-
 Page Range: (40, 41)
-
 Line Range: (1192, 1194)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 98: 
-
 Text: 
-
  修改/etc/fuse.conf文件，執行如下命令。 
 
-
 Page Range: (41, 41)
-
 Line Range: (1195, 1197)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 99: 
-
-Text: 
-# chmod a+r /etc/fuse.conf 
-
+Text: # chmod a+r /etc/fuse.conf 
 
 Page Range: (41, 41)
-
 Line Range: (1198, 1198)
-
 Filename: data/report.pdf
------------------------
-Chunk 100: 
 
-Text: 
-# vim /etc/fuse.conf 
+-----------------------
+Text: # vim /etc/fuse.conf 
 注：將fuse.conf文件中 
 {{ 
 
-
 Page Range: (41, 41)
-
 Line Range: (1199, 1201)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 101: 
-
-Text: 
-#mount_max = 1000 
-
+Text: #mount_max = 1000 
 
 Page Range: (41, 41)
-
 Line Range: (1202, 1202)
-
 Filename: data/report.pdf
------------------------
-Chunk 102: 
 
-Text: 
-#user_allow_other 
+-----------------------
+Text: #user_allow_other 
 }} 
 前面的―#‖號刪除。 
 掛載所指定的資料夾 
 
-
 Page Range: (41, 41)
-
 Line Range: (1203, 1207)
-
 Filename: data/report.pdf
------------------------
-Chunk 103: 
 
-Text: 
-# ./fuse_dfs_wrapper.sh dfs://自己的ip:9000 /var/hdfs 
+-----------------------
+Text: # ./fuse_dfs_wrapper.sh dfs://自己的ip:9000 /var/hdfs 
 可看到 
 表示已掛載成功 
 打開 /var/hdfs 可看到以掛載的資料夾 
 例: mv一個檔案到/var/hdfs 
 
-
 Page Range: (41, 42)
-
 Line Range: (1208, 1217)
-
 Filename: data/report.pdf
------------------------
-Chunk 104: 
 
-Text: 
- 
+-----------------------
+Text:  
  開啟HDFS頁面可看到 
 資料直接上傳至HDFS 
  七、實驗結果與展示 
@@ -2112,114 +1592,74 @@ Text:
  (二)註冊功能頁面：尚未註冊的使用者無法上傳影片，註冊後會寄發認證信，
 需至註冊時填寫的信箱中接收認證信。 
 
-
 Page Range: (42, 44)
-
 Line Range: (1218, 1231)
-
 Filename: data/report.pdf
------------------------
-Chunk 105: 
 
-Text: 
- 
+-----------------------
+Text:  
  (三)登入頁面：登入或註冊帳號後即可上傳影片並可觀賞影片後留言。 
 
-
 Page Range: (44, 45)
-
 Line Range: (1232, 1237)
-
 Filename: data/report.pdf
------------------------
-Chunk 106: 
 
-Text: 
- 
+-----------------------
+Text:  
 (四)上傳影片頁面：需上傳合乎格式的影片檔，並且表單要確實填寫才能送出。 
 
-
 Page Range: (45, 46)
-
 Line Range: (1238, 1240)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 107: 
-
 Text: 
-
  檔案上傳完成後即可前往影片連結網址 
 (五)影片播放頁面：觀看上傳的影片，使用flash播放器，影片比例為16:9，影
 片解析度固定為720P(1280×720)，如上傳其餘原始解析度則會自動放大或縮小
 至此解析度，此外亦可放大至全螢幕觀看，影片下方則提供影片相關資訊。 
 
-
 Page Range: (46, 46)
-
 Line Range: (1241, 1248)
-
 Filename: data/report.pdf
------------------------
-Chunk 108: 
 
-Text: 
- 
+-----------------------
+Text:  
 (六)播放頁面留言板：最多只能留言300字，下方會顯示剩餘可輸入字數，需登
 入會員並且要輸入驗證碼才能新增留言至留言板，可刪除或回覆留言。 
 
-
 Page Range: (46, 47)
-
 Line Range: (1249, 1256)
-
 Filename: data/report.pdf
------------------------
-Chunk 109: 
 
-Text: 
- 
+-----------------------
+Text:  
 (七)影片種類選取頁面：可選取要觀看的影片種類，頁面會顯示該種類最新上傳
 的15部影片。 
 
-
 Page Range: (47, 47)
-
 Line Range: (1257, 1260)
-
 Filename: data/report.pdf
------------------------
-Chunk 110: 
 
-Text: 
- 
+-----------------------
+Text:  
 (八)影片代碼錯誤：若影片代碼錯誤或影片已被移除時會出現此頁面。 
 
-
 Page Range: (47, 48)
-
 Line Range: (1261, 1266)
-
 Filename: data/report.pdf
------------------------
-Chunk 111: 
 
-Text: 
- 
+-----------------------
+Text:  
 (九)搜尋頁面：在搜尋框輸入關鍵字，即可搜尋相關影片頁面。 
 (十)影片管理頁面：可刪除和修改自己上傳的影片。 
 
-
 Page Range: (48, 49)
-
 Line Range: (1267, 1271)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 112: 
-
 Text: 
-
  效能測詴(FFmpeg-mt) 
 測詴檔大小：149mb 
 測詴檔格式：avi 
@@ -2248,17 +1688,12 @@ Text:
 的時間外，伺服器主機的運算效能也可以做到較充分的利用，這對管理者而言，
 更是省去了不少麻煩。 
 
-
 Page Range: (49, 49)
-
 Line Range: (1272, 1303)
-
 Filename: data/report.pdf
------------------------
-Chunk 113: 
 
-Text: 
- 
+-----------------------
+Text:  
  九、未來展望 
 目前本網站主要是支援一般電腦網路用戶為主，對於現在愈來愈多人擁有智
 慧型手持裝置，未來可以開發手機相關平台，讓網站可支援平台更加的多元，隨
@@ -2327,17 +1762,12 @@ http://flowplayer.org/tutorials/ffmpeg.html
 22.Pseudostreaming - Flowplayer streaming plugin 
 http://flowplayer.org/plugins/streaming/pseudostreaming.html 
 
-
 Page Range: (49, 52)
-
 Line Range: (1304, 1398)
-
 Filename: data/report.pdf
+
 -----------------------
-Chunk 114: 
-
 Text: 
-
  23.RTMP - Flowplayer streaming plugin 
 http://flowplayer.org/plugins/streaming/rtmp.html 
 24.Basic pseudostreaming setup 
@@ -2404,17 +1834,12 @@ crontab/
 53.HTM裡「上一頁」的語法 - HTML-DHTML - 程式設計俱樂部 
 http://www.programmer-club.com.tw/showSameTitleN/html/1162.html 
 
-
 Page Range: (52, 53)
-
 Line Range: (1399, 1498)
-
 Filename: data/report.pdf
------------------------
-Chunk 115: 
 
-Text: 
- 
+-----------------------
+Text:  
  54.Shuffle Error Exceeded MAX_FAILED_UNIQUE_FETCHES; bailing-out(页 1) - 
 Hadoop综合 - Hadoop技术论坛 - Powered by Discuz! Archiver 
 http://www.hadoopor.com/archiver/tid-513.html 
@@ -2449,9 +1874,8 @@ http://en.wikipedia.org/wiki/Nutch
 68.Lighttpd -維基百科,自由的百科全書(中文維基百科) 
 http://zh.wikipedia.org/zh-tw/Lighttpd 
 
-
 Page Range: (53, 54)
-
 Line Range: (1499, 1549)
-
 Filename: data/report.pdf
+
+-----------------------

@@ -5,6 +5,7 @@ from typing import List
 from pdf_to_markdown.with_pdfplumber import pdf_to_markdown
 from tools.markdown_utils import contains_strong_text, count_leading_hash
 from tools.save_result import save_result
+from tools.get_embedding import get_embedding
 
 def get_md_pages(filename, save_to_new_file) -> List[dict]:
     """split pdf into markdown pages"""
@@ -86,10 +87,10 @@ def split_text(md_pages: List[dict], split_level, split_on_strong_text) -> List[
                     text = context(contents)
 
                     final_chunk = {
-                        "filename": page["metadata"]["file_path"],
+                        "text": text,
                         "page_range": page_range,
                         "line_range": line_range,
-                        "text": text
+                        "filename": page["metadata"]["file_path"],
                     }
 
                     final_chunks.append(final_chunk)
@@ -129,6 +130,10 @@ def split_text(md_pages: List[dict], split_level, split_on_strong_text) -> List[
 
     return final_chunks
 
+def add_embeddings(chunks):
+    for chunk in chunks:
+        chunk["embedding"] = get_embedding(chunk["text"])
+    return chunks
 
 
 def main():
@@ -137,10 +142,13 @@ def main():
     save_to_new_file = input("Save to new file? (y/N) ")
     md_pages = get_md_pages(filename, save_to_new_file)
 
-    split_level = int(input("Enter the number of # (between 1 and 4): "))
+    split_level = int(input("Enter the number of # (between 1 and 6): "))
     split_on_strong_text = input("Split on **{Strong Text}**? (Y/n) ")
 
     final_chunks = split_text(md_pages, split_level, split_on_strong_text)
+
+    final_chunks = add_embeddings(final_chunks)
+
 
     save_result(final_chunks, "by_markdown", filename)
         

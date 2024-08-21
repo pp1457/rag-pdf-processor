@@ -1,10 +1,10 @@
 Chunk ID,Text,Page Range,Line Range,Filename
-0,,"(1, 1)","(1, 2)",data/report.pdf
-1," 
+1,,"(1, 1)","(1, 2)",data/report.pdf
+2," 
 ###結合雲端分散儲存與搜尋引擎之影音網站 
 Video Website with Cloud Distributed Storage and Search Engine 
 ","(1, 1)","(4, 6)",data/report.pdf
-2," 
+3," 
 963847 駱彥呈 
 963808 李哲成 
 963871 梁峻瑞 
@@ -27,7 +27,7 @@ Tunghai University, 40704 Taichung, Taiwan R.O.C.
 九、未來展望  ................................................................................................... 49 
 十、參考資料及網站  ................................................................................... 49 
 ","(2, 2)","(22, 33)",data/report.pdf
-3," 
+4," 
  一、摘要 
 近年來由於全球網路頻寬的提升，大家開始可以互相分享較大的影音檔案，
 加上雲端運算與儲存的普及，影音網站變得相當熱門。本專題將雲端運算中的
@@ -95,7 +95,7 @@ Lighttpd（發音為lighty）是一套開放原始碼的網頁伺服器，以BSD
 釋出。相較於其他的網頁伺服器，lighttpd僅需少量的記憶體及CPU資源即可達
  到同樣的效能。 
 ","(2, 5)","(34, 118)",data/report.pdf
-4," 
+5," 
 特色： 
  提供FastCGI及SCGI的負載平衡 
  支援chroot 
@@ -229,7 +229,7 @@ Crawlzilla的原理大致相同，而Crawlzilla的安裝和設定比較平易近
  1.一般FFmpeg 
 2. FFmpeg-mt 
 ","(5, 10)","(119, 267)",data/report.pdf
-5,"
+6,"
  我們發現相較於一般FFmpeg，同時間只有單核心獨自運行，一段時間後才
 交換工作，FFmpeg-mt在轉檔過程中可多執行緒同時運作，測詴結果確實符合我
 們的預期。 
@@ -254,15 +254,15 @@ Nutch搜尋引擎經過修改後，則需要測詴搜尋結果是否受到影響
 印象，做為我們影音網站的特色。如此，結合雲端分散儲存與搜尋引擎之影音網
 站即大功告成。 
 ","(10, 11)","(268, 294)",data/report.pdf
-6,"
+7,"
  五、系統架構與設計 
 (一)整體網頁架構： 
 ","(11, 11)","(295, 299)",data/report.pdf
-7," 
+8," 
 有超連結 
 私下傳遞 
 ","(11, 11)","(300, 303)",data/report.pdf
-8," 
+9," 
  login.php index.php conn.php 
 chkid.php phpmailer.php data.php 
 loginchk.php 
@@ -293,11 +293,11 @@ editinfo.php 修改影片資訊
 delvideo.php 刪除影片 search.jsp 搜尋頁 
  (二)影片觀看簡易流程架構： 
 ","(11, 12)","(304, 365)",data/report.pdf
-9," 
+10," 
 （三）伺服器系統架構 
 （四）Nutch 架構 
 ","(12, 12)","(366, 378)",data/report.pdf
-10,"   
+11,"   
 MySQL FFmpeg Website(Application) 
  Hardware Nutch(Hadoop) Lighttpd Tomcat 
 HDFS-Fuse 
@@ -330,7 +330,7 @@ automake
 php5-cgi 
 php5-mysql 
 ","(12, 13)","(379, 419)",data/report.pdf
-11," 
+12," 
 Lighttpd 上安裝 Mod-H264 Streaming Module 
 cd /lighttpd 
 sudo wget 
@@ -392,27 +392,27 @@ sudo gedit /var/lighttpd/logs/lighttpd.breakage.log (建立檔案，頇
 gedit /tests/lighttpd.conf 
 在開啟的lighttpd.conf中全選並貼上以下敘述來取代原先的敘述(IP位址需修改)： 
 ","(13, 15)","(420, 490)",data/report.pdf
-12,"# lighttpd configuration file 
+13,"# lighttpd configuration file 
 ","(15, 15)","(491, 491)",data/report.pdf
-13,"# 
+14,"# 
 ","(15, 15)","(492, 492)",data/report.pdf
-14,"# use it as a base for lighttpd 1.0.0 and above 
+15,"# use it as a base for lighttpd 1.0.0 and above 
 ","(15, 15)","(493, 493)",data/report.pdf
-15,"# 
+16,"# 
 ","(15, 15)","(494, 494)",data/report.pdf
-16,"# $Id: lighttpd.conf,v 1.7 2004/11/03 22:26:05 weigon Exp $ 
+17,"# $Id: lighttpd.conf,v 1.7 2004/11/03 22:26:05 weigon Exp $ 
  Options you really have to take care of 
 ","(15, 15)","(495, 498)",data/report.pdf
-17," 
+18," 
 ## modules to load 
 ","(15, 15)","(500, 500)",data/report.pdf
-18,"# at least mod_access and mod_accesslog should be loaded 
+19,"# at least mod_access and mod_accesslog should be loaded 
 ","(15, 15)","(501, 501)",data/report.pdf
-19,"# all other module should only be loaded if really neccesary 
+20,"# all other module should only be loaded if really neccesary 
 ","(15, 15)","(502, 502)",data/report.pdf
-20,"# - saves some time 
+21,"# - saves some time 
 ","(15, 15)","(503, 503)",data/report.pdf
-21,"# - saves memory 
+22,"# - saves memory 
 server.modules              = ( 
                    … 
            ""mod_h264_streaming"", 
@@ -421,48 +421,48 @@ server.modules              = (
 …(中間省略) 
 … 
 ","(15, 16)","(504, 513)",data/report.pdf
-22,"# mimetype mapping 
+23,"# mimetype mapping 
 mimetype.assign             = ( 
   … 
   "".css""          =>      ""text/css"", 
   … 
 ","(16, 16)","(514, 518)",data/report.pdf
-23,"  # default mime type 
+24,"  # default mime type 
   """"              =>      ""application/octet-stream"", 
  ) 
 … 
  Options that are good to be but not neccesary to be changed 
 ## 64 Mbyte ... nice limit 
 ","(16, 16)","(525, 525)",data/report.pdf
-24,"#server.max-request-size = 65000 
+25,"#server.max-request-size = 65000 
 ## bind to port (default: 80) 
 server.port                = 80 
 ","(16, 16)","(528, 530)",data/report.pdf
-25,"#server.max-request-size = 65000 
+26,"#server.max-request-size = 65000 
 ## bind to localhost (default: all interfaces) 
 server.bind                = ""192.168.xxx.xxx""  (此處請修改為自己主機
 的IP) 
 …(中間省略) 
  proxy module 
 ","(16, 16)","(531, 535)",data/report.pdf
-26,"#server.max-request-size = 65000 
+27,"#server.max-request-size = 65000 
 ## read proxy.txt for more info 
 ","(16, 16)","(536, 536)",data/report.pdf
-27,"#proxy.server               = ( "".php"" => 
+28,"#proxy.server               = ( "".php"" => 
 ","(16, 16)","(537, 537)",data/report.pdf
-28,"#                               ( ""localhost"" => 
+29,"#                               ( ""localhost"" => 
 ","(16, 16)","(538, 538)",data/report.pdf
-29,"#                                 ( 
+30,"#                                 ( 
 ","(16, 16)","(539, 539)",data/report.pdf
-30,"#                                   ""host"" => ""192.168.0.101"", 
+31,"#                                   ""host"" => ""192.168.0.101"", 
 ","(16, 16)","(540, 540)",data/report.pdf
-31,"#                                   ""port"" => 80 
+32,"#                                   ""port"" => 80 
 ","(16, 16)","(541, 541)",data/report.pdf
-32,"#                                 ) 
+33,"#                                 ) 
 ","(16, 16)","(542, 542)",data/report.pdf
-33,"#                               ) 
+34,"#                               ) 
 ","(16, 16)","(543, 543)",data/report.pdf
-34,"#                             ) 
+35,"#                             ) 
 …(以下省略) 
 … 
  接著修改php設定檔(以下步驟頇針對自己主機的記憶體大小作修改)  
@@ -470,19 +470,19 @@ sudo gedit /etc/php5/cgi/php.ini
 修改上傳暫存資料夾路徑及最大上傳檔案大小： 
 輸入自己主機的記憶體大小： 
 ","(16, 17)","(544, 555)",data/report.pdf
-35," 
+36," 
  修改最大傳輸檔案大小： 
 ","(17, 18)","(556, 561)",data/report.pdf
-36," 
+37," 
 修改timeout的時間(上傳超過這個時間就會失敗)： 
 ","(18, 19)","(562, 564)",data/report.pdf
-37,"
+38,"
 修改maxlifetime的時間(用來控制session連線時間)： 
 ","(19, 19)","(565, 569)",data/report.pdf
-38," 
+39," 
 如發生錯誤請檢查output_buffering的設定： 
 ","(19, 19)","(570, 572)",data/report.pdf
-39," 
+40," 
  建立pages資料夾（此資料夾將用來存放網頁原始碼，名稱路徑可自定）： 
 sudo mkdir -p /var/lighttpd/servers/www.example.org/pages 
 由於剛剛在/var底下建立的 /lighttpd/pages資料夾是root權限，需要使用下列的
@@ -494,11 +494,11 @@ sudo chown -R 使用者名稱 /var/lighttpd  //改變 log owner
 安裝MySQL相關套件： 
 sudo apt-get install mysql-server mysql-client 
 ","(19, 20)","(573, 590)",data/report.pdf
-40," 
+41," 
 MySQL密碼設定： 
 (為了讓我們在開發期間方便修改內容，暫時先把密碼設為123456)  
 ","(20, 20)","(591, 594)",data/report.pdf
-41," 
+42," 
  安裝phpMyAdmin網頁型資料庫管理： 
 到http://www.phpmyadmin.net/home_page/downloads.php下載
 phpMyAdmin-3.3.5.1-all-languages.tar.gz套件，下載完後解壓縮，並把到解壓縮後
@@ -510,7 +510,7 @@ cd /var/lighttpd/servers/www.example.org/pages/phpMyAdmin
 cp config.sample.inc.php config.inc.php 
 修改phpMyAdmin 資料夾中的config.inc.php設定檔： 
 ","(20, 21)","(595, 609)",data/report.pdf
-42," 
+43," 
 執行MySQL： 
 sudo /etc/init.d/mysql start 
 執行測詴lighpptd： 
@@ -521,18 +521,18 @@ $ sudo ./lighttpd -D -f
 網址輸入http://自己主機的IP位址/phpMyAdmin(即先前解壓縮修改的資料夾名
 稱)/  
 ","(21, 22)","(610, 621)",data/report.pdf
-43,"
+44,"
  (可先將語言(Language)改為繁體中文，方便管理與對照說明) 
 ","(22, 22)","(622, 625)",data/report.pdf
-44," 
+45," 
 建立資料庫 
 建立新web資料庫： 
 校對選擇utf8_unicode_ci，設定完後點選『建立』 
 ","(22, 22)","(626, 630)",data/report.pdf
-45," 
+46," 
 新增資料表video（存放影片資料） 
 ","(22, 23)","(631, 633)",data/report.pdf
-46,"
+47,"
  v_id:影片id，使用現在時間加上亂數所組成的16進位數字作為影片id代號 
 v_title:影片名稱，由使用者輸入 
 v_text:影片簡介，由使用者輸入 
@@ -563,7 +563,7 @@ PRIMARY KEY (  `v_id` )
 ) ENGINE = MYISAM ; 
  新增資料表login_info （存放會員資料） 
 ","(23, 24)","(634, 668)",data/report.pdf
-47," 
+48," 
 ID:流水編號 
 u_id:帳號 
 u_pwd:密碼，存入時有加密 
@@ -617,7 +617,7 @@ u_report: 檢舉者的帳號，會員才可以進行檢舉，每位會員只能�
 舉一次 
 i_time:檢舉的時間註記 
 ","(24, 27)","(669, 734)",data/report.pdf
-48,"
+49,"
  CREATE TABLE  `web`.`inappropriate` ( 
 `v_id` VARCHAR( 12 ) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL , 
 `u_report` VARCHAR( 255 ) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT 
@@ -681,7 +681,7 @@ sudo make install
 ffmpeg 
 出現類似下面的圖案就表示成功了 
 ","(27, 29)","(735, 810)",data/report.pdf
-49," 
+50," 
 (5)安裝Nutch 
 Nutch1.1安裝 
 cd /opt 
@@ -832,7 +832,7 @@ Larger
 <!--<property> 
  <name>urlfilter.order</name>  
 ","(29, 34)","(811, 982)",data/report.pdf
-50,"
+51,"
  <value>org.apache.nutch.urlfilter.regex.RegexURLFilter</value
 >  
   <description>The order by which url filters are applied.  
@@ -857,21 +857,21 @@ depending
 gedit conf/crawl-urlfilter.txt 
 修改內容 
 ","(34, 34)","(983, 1008)",data/report.pdf
-51,"# skip  ftp:, & mailto: urls 
+52,"# skip  ftp:, & mailto: urls 
 -^(ftp|mailto): 
 ","(34, 34)","(1009, 1010)",data/report.pdf
-52,"# skip image and other suffixes we can't yet parse 
+53,"# skip image and other suffixes we can't yet parse 
 -\.(gif|GIF|jpg|JPG|png|PNG|ico|ICO|css|sit|eps|wmf|mpg|xls|g
 z|rpm|tgz|mov|MOV|exe|jpeg|JPEG|bmp|BMP)$ 
 ","(34, 34)","(1011, 1013)",data/report.pdf
-53,"# skip URLs containing certain characters as probable queries, 
+54,"# skip URLs containing certain characters as probable queries, 
 etc. 
 -[*!@] 
 ","(34, 34)","(1014, 1016)",data/report.pdf
-54,"# accept hosts in MY.DOMAIN.NAME 
+55,"# accept hosts in MY.DOMAIN.NAME 
 +^http://([a-z0-9]*\.)*.*/ 
 ","(34, 34)","(1017, 1018)",data/report.pdf
-55,"# accecpt anything else 
+56,"# accecpt anything else 
 +.* 
 將相關文件複製到其他主機，形成叢集(複製完畢後，也要修改/opt/nutch/和
 /var/nutch-hadoop權限，參考文件前面語法) 
@@ -910,12 +910,12 @@ bin/nutch crawl urls -dir search -threads 2 -depth 2 -topN 1000
 如出現Error: JAVA_HOME is not set. 修改下面設定：修改環境變數設定檔 
 sudo gedit /etc/bash.bashrc 
 ","(34, 36)","(1019, 1068)",data/report.pdf
-56,"#set java environment 
+57,"#set java environment 
 JAVA_HOME=/lib/jdk1.6.0_21 
 …(中間省略) 
 export  JAVA_HOME 
 ","(36, 36)","(1069, 1073)",data/report.pdf
-57," 
+58," 
 bin/hadoop dfs -get search /tmp/search 
 sudo gedit 
 /opt/tomcat/webapps/nutch-1.1/WEB-INF/classes/nutch-site.xml 
@@ -933,17 +933,17 @@ bin/hadoop fs -rmr urls
 rm -rf /tmp/search/* 
 (六)安裝FUSE 
 ","(36, 36)","(1074, 1093)",data/report.pdf
-58,"# sudo vim /etc/apt/sources.list 
+59,"# sudo vim /etc/apt/sources.list 
 加入 
 deb http://us.archive.ubuntu.com/ubuntu/ jaunty multiverse 
 deb http://us.archive.ubuntu.com/ubuntu/ jaunty-updates  
 ","(36, 36)","(1094, 1097)",data/report.pdf
-59,"# sudo apt-get update 
+60,"# sudo apt-get update 
 ","(36, 36)","(1098, 1098)",data/report.pdf
-60,"# sudo apt-get install subversion ant automake sun-java5-jdk 
+61,"# sudo apt-get install subversion ant automake sun-java5-jdk 
 sun-java6-jdk 
 ","(36, 36)","(1099, 1101)",data/report.pdf
-61,"# sudo vim ~/.bashrc 
+62,"# sudo vim ~/.bashrc 
  加入  //請依自己電腦套件的路徑跟位置作修改 
 export JAVA_HOME=/usr/lib/jvm/java-6-sun 
 export OS_NAME=linux 
@@ -953,33 +953,33 @@ export FUSE_HOME=/opt/app/fuse
 export PATH=$PATH:$HADOOP_HOME/build/contrib/fuse-dfs 
 儲存離開 
 ","(36, 37)","(1102, 1113)",data/report.pdf
-62,"# source ~/.bashrc 
+63,"# source ~/.bashrc 
 ","(37, 37)","(1114, 1114)",data/report.pdf
-63,"# sudo vim /boot/config-2.6.32-24-generic 
+64,"# sudo vim /boot/config-2.6.32-24-generic 
 加入 
 CONFIG_FUSE_FS=y instead CONFIG_FUSE_FS=m 
 ","(37, 38)","(1115, 1118)",data/report.pdf
-64,"
+65,"
  安裝hadoop-0.20.2 確定啟動成功，再關閉 
 ","(38, 38)","(1119, 1122)",data/report.pdf
-65,"# cd $HADOOP_HOME    
+66,"# cd $HADOOP_HOME    
 ","(38, 38)","(1123, 1123)",data/report.pdf
-66,"# ant clean 
+67,"# ant clean 
 ","(38, 38)","(1124, 1124)",data/report.pdf
-67,"# ant compile-c++-libhdfs -Dlibhdfs=1 
+68,"# ant compile-c++-libhdfs -Dlibhdfs=1 
 安裝forrest-0.8 
 ","(38, 38)","(1125, 1127)",data/report.pdf
-68,"# wget 
+69,"# wget 
 http://apache.ntu.edu.tw//forrest/apache-forrest-0.8.tar.gz 
 ","(38, 38)","(1128, 1129)",data/report.pdf
-69,"# tar zxf apache-forrest-0.8.tar.gz 
+70,"# tar zxf apache-forrest-0.8.tar.gz 
 ","(38, 38)","(1130, 1130)",data/report.pdf
-70,"# chmod +x apache-forrest-0.8/bin/forrest 
+71,"# chmod +x apache-forrest-0.8/bin/forrest 
 ","(38, 38)","(1131, 1131)",data/report.pdf
-71,"# cd /opt/hadoop 
+72,"# cd /opt/hadoop 
 修改build.xml 否則無法ant 
 ","(38, 38)","(1132, 1134)",data/report.pdf
-72,"# sudo gedit build.xml 
+73,"# sudo gedit build.xml 
 第1059行 
 改成<target name=""package"" depends=""compile, jar, examples, tools-jar, jar-test, 
 ant-tasks, package-librecordio"" 
@@ -990,87 +990,87 @@ ant-tasks, package-librecordio""
 </copy> 
 儲存離開 
 ","(38, 38)","(1135, 1146)",data/report.pdf
-73,"# ant package -Djava5.home=/usr/lib/jvm/java-1.5.0-sun 
+74,"# ant package -Djava5.home=/usr/lib/jvm/java-1.5.0-sun 
 -Dforrest.home=$(pwd)/apache-forrest-0.8 
 ","(38, 38)","(1147, 1149)",data/report.pdf
-74," 
+75," 
 下載fuse-2.8.5.tar.gz 
 http://sourceforge.net/projects/fuse/files/fuse-2.X/2.8.5/fuse
 -2.8.5.tar.gz/download 
 ","(38, 38)","(1150, 1154)",data/report.pdf
-75,"# tar zxf fuse-2.8.5.tar.gz 
+76,"# tar zxf fuse-2.8.5.tar.gz 
 ","(38, 38)","(1155, 1155)",data/report.pdf
-76,"# cd fuse-2.8.5 
+77,"# cd fuse-2.8.5 
 ","(38, 38)","(1156, 1156)",data/report.pdf
-77,"# mkdir -p /opt/app/fuse;./configure --prefix=/opt/app/fuse 
+78,"# mkdir -p /opt/app/fuse;./configure --prefix=/opt/app/fuse 
 ","(38, 38)","(1157, 1157)",data/report.pdf
-78,"# make -j2 
+79,"# make -j2 
 ","(38, 39)","(1158, 1160)",data/report.pdf
-79," # make install 
+80," # make install 
 ","(39, 39)","(1161, 1161)",data/report.pdf
-80,"# modprobe fuse 
+81,"# modprobe fuse 
 ","(39, 39)","(1162, 1163)",data/report.pdf
-81,"# cd $HADOOP_HOME 
+82,"# cd $HADOOP_HOME 
 ","(39, 39)","(1164, 1164)",data/report.pdf
-82,"# ant compile -Dcompile.c++=true -Dlibhdfs=true （在hadoop目錄下） 
+83,"# ant compile -Dcompile.c++=true -Dlibhdfs=true （在hadoop目錄下） 
 ","(39, 39)","(1165, 1165)",data/report.pdf
-83,"# ant package 
+84,"# ant package 
 ","(39, 39)","(1166, 1166)",data/report.pdf
-84,"# cd build 
+85,"# cd build 
 ","(39, 39)","(1167, 1167)",data/report.pdf
-85,"# mkdir libhdfs 
+86,"# mkdir libhdfs 
 ","(39, 39)","(1168, 1168)",data/report.pdf
-86,"# cp build/c++/Linux-i386-32/lib/* $HADOOP_HOME/build/libhdfs 
+87,"# cp build/c++/Linux-i386-32/lib/* $HADOOP_HOME/build/libhdfs 
 ","(39, 39)","(1169, 1169)",data/report.pdf
-87,"# ant compile-contrib -Dlibhdfs=1 -Dfusedfs=1 
+88,"# ant compile-contrib -Dlibhdfs=1 -Dfusedfs=1 
 ","(39, 39)","(1170, 1171)",data/report.pdf
-88,"# gedit /etc/ld.so.conf 
+89,"# gedit /etc/ld.so.conf 
 加入 
 /usr/lib/jvm/java-6-openjdk/jre/lib/amd64/server/ 
 /usr/local/lib/ 
 ","(39, 39)","(1172, 1176)",data/report.pdf
-89," 
+90," 
 ","(39, 39)","(1177, 1177)",data/report.pdf
-90,"# ldconfig 
+91,"# ldconfig 
 啟動hadoop 
 ","(39, 39)","(1178, 1181)",data/report.pdf
-91,"# cd $HADOOP_HOME 
+92,"# cd $HADOOP_HOME 
 ","(39, 40)","(1182, 1184)",data/report.pdf
-92," # cd build/contrib/fuse-dfs 
+93," # cd build/contrib/fuse-dfs 
 ","(40, 40)","(1185, 1185)",data/report.pdf
-93,"# chmod +x fuse_dfs_wrapper.sh 
+94,"# chmod +x fuse_dfs_wrapper.sh 
 ","(40, 40)","(1186, 1186)",data/report.pdf
-94,"# mkdir /var/hdfs 
+95,"# mkdir /var/hdfs 
 修改fuse_dfs_wrapper.sh文件 
 ","(40, 40)","(1187, 1189)",data/report.pdf
-95,"# gedit fuse_dfs_wrapper.sh 
+96,"# gedit fuse_dfs_wrapper.sh 
 ","(40, 40)","(1190, 1191)",data/report.pdf
-96,"# ./ fuse_dfs_wrapper.sh 
+97,"# ./ fuse_dfs_wrapper.sh 
 出現 下圖表示成功 
 ","(40, 41)","(1192, 1194)",data/report.pdf
-97,"
+98,"
  修改/etc/fuse.conf文件，執行如下命令。 
 ","(41, 41)","(1195, 1197)",data/report.pdf
-98,"# chmod a+r /etc/fuse.conf 
+99,"# chmod a+r /etc/fuse.conf 
 ","(41, 41)","(1198, 1198)",data/report.pdf
-99,"# vim /etc/fuse.conf 
+100,"# vim /etc/fuse.conf 
 注：將fuse.conf文件中 
 {{ 
 ","(41, 41)","(1199, 1201)",data/report.pdf
-100,"#mount_max = 1000 
+101,"#mount_max = 1000 
 ","(41, 41)","(1202, 1202)",data/report.pdf
-101,"#user_allow_other 
+102,"#user_allow_other 
 }} 
 前面的―#‖號刪除。 
 掛載所指定的資料夾 
 ","(41, 41)","(1203, 1207)",data/report.pdf
-102,"# ./fuse_dfs_wrapper.sh dfs://自己的ip:9000 /var/hdfs 
+103,"# ./fuse_dfs_wrapper.sh dfs://自己的ip:9000 /var/hdfs 
 可看到 
 表示已掛載成功 
 打開 /var/hdfs 可看到以掛載的資料夾 
 例: mv一個檔案到/var/hdfs 
 ","(41, 42)","(1208, 1217)",data/report.pdf
-103," 
+104," 
  開啟HDFS頁面可看到 
 資料直接上傳至HDFS 
  七、實驗結果與展示 
@@ -1078,34 +1078,34 @@ http://sourceforge.net/projects/fuse/files/fuse-2.X/2.8.5/fuse
  (二)註冊功能頁面：尚未註冊的使用者無法上傳影片，註冊後會寄發認證信，
 需至註冊時填寫的信箱中接收認證信。 
 ","(42, 44)","(1218, 1231)",data/report.pdf
-104," 
+105," 
  (三)登入頁面：登入或註冊帳號後即可上傳影片並可觀賞影片後留言。 
 ","(44, 45)","(1232, 1237)",data/report.pdf
-105," 
+106," 
 (四)上傳影片頁面：需上傳合乎格式的影片檔，並且表單要確實填寫才能送出。 
 ","(45, 46)","(1238, 1240)",data/report.pdf
-106,"
+107,"
  檔案上傳完成後即可前往影片連結網址 
 (五)影片播放頁面：觀看上傳的影片，使用flash播放器，影片比例為16:9，影
 片解析度固定為720P(1280×720)，如上傳其餘原始解析度則會自動放大或縮小
 至此解析度，此外亦可放大至全螢幕觀看，影片下方則提供影片相關資訊。 
 ","(46, 46)","(1241, 1248)",data/report.pdf
-107," 
+108," 
 (六)播放頁面留言板：最多只能留言300字，下方會顯示剩餘可輸入字數，需登
 入會員並且要輸入驗證碼才能新增留言至留言板，可刪除或回覆留言。 
 ","(46, 47)","(1249, 1256)",data/report.pdf
-108," 
+109," 
 (七)影片種類選取頁面：可選取要觀看的影片種類，頁面會顯示該種類最新上傳
 的15部影片。 
 ","(47, 47)","(1257, 1260)",data/report.pdf
-109," 
+110," 
 (八)影片代碼錯誤：若影片代碼錯誤或影片已被移除時會出現此頁面。 
 ","(47, 48)","(1261, 1266)",data/report.pdf
-110," 
+111," 
 (九)搜尋頁面：在搜尋框輸入關鍵字，即可搜尋相關影片頁面。 
 (十)影片管理頁面：可刪除和修改自己上傳的影片。 
 ","(48, 49)","(1267, 1271)",data/report.pdf
-111,"
+112,"
  效能測詴(FFmpeg-mt) 
 測詴檔大小：149mb 
 測詴檔格式：avi 
@@ -1134,7 +1134,7 @@ http://sourceforge.net/projects/fuse/files/fuse-2.X/2.8.5/fuse
 的時間外，伺服器主機的運算效能也可以做到較充分的利用，這對管理者而言，
 更是省去了不少麻煩。 
 ","(49, 49)","(1272, 1303)",data/report.pdf
-112," 
+113," 
  九、未來展望 
 目前本網站主要是支援一般電腦網路用戶為主，對於現在愈來愈多人擁有智
 慧型手持裝置，未來可以開發手機相關平台，讓網站可支援平台更加的多元，隨
@@ -1203,7 +1203,7 @@ http://flowplayer.org/tutorials/ffmpeg.html
 22.Pseudostreaming - Flowplayer streaming plugin 
 http://flowplayer.org/plugins/streaming/pseudostreaming.html 
 ","(49, 52)","(1304, 1398)",data/report.pdf
-113,"
+114,"
  23.RTMP - Flowplayer streaming plugin 
 http://flowplayer.org/plugins/streaming/rtmp.html 
 24.Basic pseudostreaming setup 
@@ -1270,7 +1270,7 @@ crontab/
 53.HTM裡「上一頁」的語法 - HTML-DHTML - 程式設計俱樂部 
 http://www.programmer-club.com.tw/showSameTitleN/html/1162.html 
 ","(52, 53)","(1399, 1498)",data/report.pdf
-114," 
+115," 
  54.Shuffle Error Exceeded MAX_FAILED_UNIQUE_FETCHES; bailing-out(页 1) - 
 Hadoop综合 - Hadoop技术论坛 - Powered by Discuz! Archiver 
 http://www.hadoopor.com/archiver/tid-513.html 
