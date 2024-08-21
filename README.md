@@ -16,6 +16,8 @@ List of pages, each page is a dictionary, contains the following keys
 - text(str) : content of the page
 - metadata(dict) : dictionary contains file_path, and page(page number)
 
+----
+
 #### `split_text(md_pages, split_level, split_on_strong_text) -> final_chunks`
 ##### `md_pages(List[dict])`
 Output of `get_md_pages`
