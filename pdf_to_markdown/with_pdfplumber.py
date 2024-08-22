@@ -8,7 +8,6 @@ def extract_lines(pdf_path):
 
     font_size_counter = Counter()
 
-    line_metadatas = []
     lines = []
 
     line_id = 0
@@ -32,14 +31,14 @@ def extract_lines(pdf_path):
                         if tmp_counter:
                             cur_font_size = tmp_counter.most_common()[0][0]
 
-                        line_metadatas.append({
+                        lines.append({
+                            "text": (line_content + "\n"),
                             "font_size": cur_font_size,
                             "page": pdf.pages[i].page_number,
                             "line_id": line_id,
                             "file_path": pdf_path
                         })
 
-                        lines.append(line_content + "\n")
                         line_content = ""
 
                         font_size_counter[cur_font_size] += 1
@@ -57,14 +56,14 @@ def extract_lines(pdf_path):
             if tmp_counter:
                 cur_font_size = tmp_counter.most_common()[0][0]
 
-            line_metadatas.append({
+            lines.append({
+                "text": (line_content + "\n"),
                 "font_size": cur_font_size,
                 "page": pdf.pages[i].page_number,
-                "line_id": line_id+1,
+                "line_id": line_id,
                 "file_path": pdf_path
             })
 
-            lines.append(line_content + "\n")
 
         most_common_sizes = tmp_counter.most_common()
 
@@ -82,9 +81,9 @@ def extract_lines(pdf_path):
             break
         header_sizes.append(repeated_sizes[i])
 
-    return lines, line_metadatas, header_sizes
+    return lines, header_sizes
 
-def add_hash_to_header_lines(lines, line_metadatas, header_sizes):
+def add_hash_to_header_lines(lines, header_sizes):
     """ add hash to header lines """
 
     md_pages = []
@@ -92,16 +91,16 @@ def add_hash_to_header_lines(lines, line_metadatas, header_sizes):
     page_content = ""
     last_page = -1
 
-    for i in range(len(lines)):
+    for line in lines:
 
-        cur_font_size = line_metadatas[i]["font_size"]
-        cur_page = line_metadatas[i]["page"]
+        cur_font_size = line["font_size"]
+        cur_page = line["page"]
 
         if last_page != -1 and cur_page != last_page:
             md_pages.append({
                 "text": page_content,
                 "metadata": {
-                    "file_path": line_metadatas[i]["file_path"],
+                    "file_path": line["file_path"],
                     "page": last_page
                 },
             })
@@ -110,9 +109,9 @@ def add_hash_to_header_lines(lines, line_metadatas, header_sizes):
         if cur_font_size in header_sizes:
             number_of_hashes = header_sizes.index(cur_font_size) + 1
             for _ in range(number_of_hashes):
-                lines[i] = "#" + lines[i]
+                line["text"] = "#" + line["text"]
 
-        page_content += lines[i]
+        page_content += line["text"]
 
         last_page = cur_page
 
@@ -122,9 +121,9 @@ def add_hash_to_header_lines(lines, line_metadatas, header_sizes):
 def pdf_to_markdown(filename: str) -> List[dict]:
     input_file = "data/" + filename + ".pdf"
 
-    lines, line_metadatas, header_sizes = extract_lines(input_file)
+    lines, header_sizes = extract_lines(input_file)
 
-    result = add_hash_to_header_lines(lines, line_metadatas, header_sizes)
+    result = add_hash_to_header_lines(lines, header_sizes)
 
     return result
 

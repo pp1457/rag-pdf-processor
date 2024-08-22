@@ -53,25 +53,24 @@ def recursive_char(chars: List[dict], split_characters: List[str], chunk_size, o
     return output
     
 
-def split_empty_lines(lines, line_metadatas):
+def split_empty_lines(lines):
 
     new_lines = []
     new_metadatas = []
     empty_line_count = 0
 
-    for line_id, line in enumerate(lines):
-        if line.strip() == "":
+    for line in lines:
+        if line["text"].strip() == "":
             empty_line_count += 1
             if empty_line_count == 1:
                 empty_line_count = -10000000
-                new_lines.append("")
-                new_metadatas.append(line_metadatas[line_id])
+                line["text"] = ""
+                new_lines.append(line)
         else:
             empty_line_count = 0
             new_lines.append(line)
-            new_metadatas.append(line_metadatas[line_id])
 
-    return new_lines, new_metadatas
+    return new_lines
 
 def transform_to_chunk(chars):
     """ transform from chars to chunks """
@@ -90,11 +89,11 @@ def transform_to_chunk(chars):
     return final_chunk
     
 
-def split_text(lines: List[str], line_metadatas: List[dict], split_characters: List[str], split_empty_line, chunk_size, overlap):
+def split_text(lines: List[dict], split_characters: List[str], yes_split_empty_line, chunk_size, overlap):
     """ split text by recursive char """
 
-    if split_empty_line != "n":
-        lines, line_metadatas = split_empty_lines(lines, line_metadatas)
+    if yes_split_empty_line != "n":
+        lines = split_empty_lines(lines)
         split_characters = [""] + split_characters
 
 
@@ -103,14 +102,13 @@ def split_text(lines: List[str], line_metadatas: List[dict], split_characters: L
 
     all_chars = []
 
-    for line_id, line in enumerate(lines):
-        line = line.strip()
-        for char in line:
+    for line in lines:
+        for char in line["text"]:
             all_chars.append({
                 "text": char,
-                "line_id": line_id,
-                "page": line_metadatas[line_id]["page"],
-                "filename": line_metadatas[line_id]["file_path"]
+                "line_id": line["line_id"],
+                "page": line["page"],
+                "filename": line["file_path"]
             })
 
     split_results = recursive_char(all_chars, split_characters, chunk_size, overlap)
@@ -129,15 +127,18 @@ def main():
     filename = input("File Name: ")
     input_file = "data/" + filename + ".pdf"
 
-    lines, line_metadatas, header_sizes = extract_lines(input_file)
+    lines, header_sizes = extract_lines(input_file)
 
-    split_empty_line = input("Split empty line? (Y/n) ")
+    yes_split_empty_line = input("Split empty line? (Y/n) ")
     chunk_size = int(input("Chunk Size: "))
     overlap = int(input("Overlap Size: "))
 
-    final_chunks = split_text(lines, line_metadatas, ["。", ".", "\n", "  ", " "], split_empty_line, chunk_size, overlap)
+    final_chunks = split_text(lines, ["。", ".", "\n", "  ", " "], yes_split_empty_line, chunk_size, overlap)
 
-    final_chunks = add_embeddings(final_chunks)
+    yes_add_embedding = input("Add embedding? (y/N) ")
+
+    if yes_add_embedding == "y":
+        final_chunks = add_embeddings(final_chunks)
 
     save_result(final_chunks, "recursive_char", filename)
 

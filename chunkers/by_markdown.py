@@ -142,7 +142,11 @@ def main():
 
     final_chunks = split_text(md_pages, split_level, split_on_strong_text)
 
-    final_chunks = add_embeddings(final_chunks)
+    yes_add_embedding = input("Add embedding? (y/N) ")
+
+    if yes_add_embedding == "y":
+        final_chunks = add_embeddings(final_chunks)
+
 
 
     save_result(final_chunks, "by_markdown", filename)

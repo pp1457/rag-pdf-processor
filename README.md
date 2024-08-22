@@ -9,10 +9,9 @@ This repository is used for processing pdf for RAG
 * `extract_lines(pdf_path) -> lines, line_metadatas, header_sizes`
     - `pdf_path` :
 Absolute path of the pdf file
-    - `lines(List(str))` :
-Content of each line
-    - `line_metadatas(List(str))` :
+    - `lines(List(dict))` :
 Dictionary with the following keys
+        - `text`: content of this line
         - `font_size(int)` : most common font size in this line
         - `page(int)` : page number of this line
         - `line_id(int)` : id of this line
@@ -21,8 +20,6 @@ Dictionary with the following keys
 List of header size sorted from big to small
 * `add_hash_to_header_lines(lines, line_metadatas, header_sizes) -> md_pages`
     - `lines(List(str))` :
-Return value of `extract_lines()`
-    - `line_metadatas(List(str))` :
 Return value of `extract_lines()`
     - `header_sizes(List(int))` :
 Return value of `extract_lines()`
@@ -74,10 +71,9 @@ List of chunks, each chunk is a dictionary, contains the following keys
 
 ### `recursive_char.py`
 * `split_text(lines, line_metadatas, split_characters, split_empty_line, chunk_size, overlap) -> final_chunks`
-    - `lines(List(str))` :
-Content of each line
-    - `line_metadatas(List(str))` :
+    - `lines(List(dict))` :
 Dictionary with the following keys
+        - `text`: content of this line
         - `font_size(int)` : most common font size in this line
         - `page(int)` : page number of this line
         - `line_id(int)` : id of this line
