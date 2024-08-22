@@ -1,20 +1,21 @@
 """ pdf to markdown with pdfplumber """
+
 from collections import Counter
 from typing import List
 import pdfplumber
 
-def extract_lines(pdf_path):
+def extract_lines(pdf_path, header_ratio = 0.09, footer_ratio = 0.95):
     """ extract lines """
 
     font_size_counter = Counter()
-
     lines = []
-
     line_id = 0
 
     with pdfplumber.open(pdf_path) as pdf:
         for i in range(len(pdf.pages)):
-            chars = pdf.pages[i].chars
+            page = pdf.pages[i]
+            chars = page.chars
+            page_height = page.height
 
             last_bottom = -1
 
@@ -23,13 +24,17 @@ def extract_lines(pdf_path):
             line_content = ""
 
             for char in chars:
+
+                if char["bottom"] < header_ratio * page_height or char["top"] > footer_ratio * page_height:
+                    continue
+
                 if char["top"] > last_bottom:
                     if line_id > 0:
 
                         cur_font_size = 0
 
                         if tmp_counter:
-                            cur_font_size = tmp_counter.most_common()[0][0]
+                            cur_font_size = tmp_counter.most_common(1)[0][0]
 
                         lines.append({
                             "text": (line_content + "\n"),
@@ -115,6 +120,15 @@ def add_hash_to_header_lines(lines, header_sizes):
 
         last_page = cur_page
 
+    if page_content:
+        md_pages.append({
+            "text": page_content,
+            "metadata": {
+                "file_path": line["file_path"],
+                "page": last_page
+            },
+        })
+
     return md_pages
 
 
@@ -129,4 +143,4 @@ def pdf_to_markdown(filename: str) -> List[dict]:
 
 
 if __name__ == "__main__":
-    pdf_to_markdown("game")
+    print(pdf_to_markdown("fubon"))

@@ -8,9 +8,13 @@ This repository is used for processing pdf for RAG
 
 ## `pdf_to_markdown`
 ### `with_pdfplumber.py`
-* `extract_lines(pdf_path) -> lines, header_sizes`
-    - `pdf_path` :
+* `extract_lines(pdf_path, header_ratio = 0.09, footer_ratio = 0.95) -> lines, header_sizes`
+    - `pdf_path(str)` :
 Absolute path of the pdf file
+    - `header_ratio(float)` :
+Ratio of the top of page to be excluded, this is optional
+    - `footer_ratio(float)` :
+Ratio of the bottom of page to be excluded, this is optional
     - `lines(List(dict))` :
 Dictionary with the following keys
         - `text`: content of this line
