@@ -1,34 +1,19 @@
-import pdfplumber
 from typing import List
 from pdf_to_markdown.with_pdfplumber import extract_lines
 from tools.save_result import save_result
 from tools.get_embedding import add_embeddings
-
-def split(chars, split_character):
-    result = []
-    cur = []
-    for char in chars:
-        cur.append(char)
-        if char["text"] == split_character:
-            result.append(cur)
-            cur = []
-    if cur:
-        result.append(cur)
-
-    return result
-
-
-def content(chars):
-    output = "".join(char["text"] for char in chars)
-    return output
+from tools.split_characters import split_by_characters
+from tools.split_lines import split_on_empty_lines
+from tools.transform_to_chunk import transform_to_chunk
 
 
 def recursive_char(chars: List[dict], split_characters: List[str], chunk_size, overlap):
+    """ recursive char text splitters """
 
     tmp_chunks = []
 
     if len(chars) > chunk_size:
-        tmp_chunks = split(chars, split_characters[0])
+        tmp_chunks = split_by_characters(chars, [split_characters[0]])
     else:
         return [chars]
 
@@ -37,7 +22,7 @@ def recursive_char(chars: List[dict], split_characters: List[str], chunk_size, o
 
     for tmp_chunk in tmp_chunks:
 
-        combine_chunk = last_overlap + tmp_chunk 
+        combine_chunk = last_overlap + tmp_chunk
 
         if overlap < len(tmp_chunk):
             last_overlap = tmp_chunk[len(tmp_chunk) - overlap: len(tmp_chunk)]
@@ -53,52 +38,12 @@ def recursive_char(chars: List[dict], split_characters: List[str], chunk_size, o
     return output
     
 
-def split_empty_lines(lines):
-
-    new_lines = []
-    new_metadatas = []
-    empty_line_count = 0
-
-    for line in lines:
-        if line["text"].strip() == "":
-            empty_line_count += 1
-            if empty_line_count == 1:
-                empty_line_count = -10000000
-                line["text"] = ""
-                new_lines.append(line)
-        else:
-            empty_line_count = 0
-            new_lines.append(line)
-
-    return new_lines
-
-def transform_to_chunk(chars):
-    """ transform from chars to chunks """
-    text = ""
-
-    for char in chars:
-        text += char["text"]
-
-    final_chunk = {
-        "text": text,
-        "page_range": (chars[0]["page"], chars[-1]["page"]),
-        "line_range": (chars[0]["line_id"], chars[-1]["line_id"]),
-        "filename": chars[0]["filename"],
-    }
-
-    return final_chunk
-    
-
 def split_text(lines: List[dict], split_characters: List[str], yes_split_empty_line, chunk_size, overlap):
     """ split text by recursive char """
 
     if yes_split_empty_line != "n":
-        lines = split_empty_lines(lines)
+        lines = split_on_empty_lines(lines)
         split_characters = [""] + split_characters
-
-
-    page_content = ""
-    last_page = -1
 
     all_chars = []
 
@@ -127,7 +72,7 @@ def main():
     filename = input("File Name: ")
     input_file = "data/" + filename + ".pdf"
 
-    lines, header_sizes = extract_lines(input_file)
+    lines, _ = extract_lines(input_file)
 
     yes_split_empty_line = input("Split empty line? (Y/n) ")
     chunk_size = int(input("Chunk Size: "))
