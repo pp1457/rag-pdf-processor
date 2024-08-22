@@ -6,7 +6,7 @@ This repository is used for processing pdf for RAG
 
 ## `pdf_to_markdown`
 ### `with_pdfplumber.py`
-* `extract_lines(pdf_path) -> lines, line_metadatas, header_sizes`
+* `extract_lines(pdf_path) -> lines, header_sizes`
     - `pdf_path` :
 Absolute path of the pdf file
     - `lines(List(dict))` :
@@ -18,7 +18,7 @@ Dictionary with the following keys
         - `file_path(str)` : file path of this line
     - `header_sizes(List(int))` :
 List of header size sorted from big to small
-* `add_hash_to_header_lines(lines, line_metadatas, header_sizes) -> md_pages`
+* `add_hash_to_header_lines(lines, header_sizes) -> md_pages`
     - `lines(List(str))` :
 Return value of `extract_lines()`
     - `header_sizes(List(int))` :
@@ -70,7 +70,7 @@ List of chunks, each chunk is a dictionary, contains the following keys
         - `line_range((int, int))` : line range of this chunk
 
 ### `recursive_char.py`
-* `split_text(lines, line_metadatas, split_characters, split_empty_line, chunk_size, overlap) -> final_chunks`
+* `split_text(lines, split_characters, split_empty_line, chunk_size, overlap) -> final_chunks`
     - `lines(List(dict))` :
 Dictionary with the following keys
         - `text`: content of this line
