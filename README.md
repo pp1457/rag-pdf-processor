@@ -86,5 +86,31 @@ List of character to split on
 Expected chunk size, real size will not exceed this
     - `overlap(int)` :
 Expected overlap size
+    - `final_chunks(List[dict])` :
+List of chunks, each chunk is a dictionary, contains the following keys
+        - `text(str)` : content of this chunk
+        - `filename(str)` : file path of this chunk
+        - `page_range((int, int))` : page range of this chunk
+        - `line_range((int, int))` : line range of this chunk
 
+### `semantic.py`
+* `split_text(lines, buffer_size, chunk_number) -> final_chunks`
+    - `lines(List(dict))` :
+Dictionary with the following keys
+        - `text`: content of this line
+        - `font_size(int)` : most common font size in this line
+        - `page(int)` : page number of this line
+        - `line_id(int)` : id of this line
+        - `file_path(str)` : file path of this line
+    - `buffer_size(int)` :
+Number of sentences combined in a group
+    - `chunk_number(int)` :
+Number of final chunks
+    - `final_chunks(List[dict])` :
+List of chunks, each chunk is a dictionary, contains the following keys
+        - `text(str)` : content of this chunk
+        - `filename(str)` : file path of this chunk
+        - `page_range((int, int))` : page range of this chunk
+        - `line_range((int, int))` : line range of this chunk
+    
 ---

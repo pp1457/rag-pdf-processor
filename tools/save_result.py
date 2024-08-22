@@ -13,7 +13,7 @@ def save_result(final_chunks, method, filename):
     csv_file_path = os.path.join(csv_dir, f"{filename}_{method}.csv")
 
     # Define CSV fields and initialize rows list
-    fields = ["Chunk ID", "Text", "Page Range", "Line Range", "Filename", "Embedding"]
+    fields = ["chunk_id", "text", "page_range", "line_range", "filename", "embedding"]
     rows = []
 
     # Open the text file for writing
