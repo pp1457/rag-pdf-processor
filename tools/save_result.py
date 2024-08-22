@@ -21,10 +21,11 @@ def save_result(final_chunks, method, filename):
         # Iterate over the chunks with chunk_id
         for chunk_id, chunk in enumerate(final_chunks, start=1):
             row = [chunk_id]
+            file.write(f"\nChunk #{chunk_id}:\n\n")
             for key, value in chunk.items():
                 row.append(value)
                 # Writing to the text file
-                file.write(f"{key.replace('_', ' ').title()}: {value}\n")
+                file.write(f"{key.replace('_', ' ').title()}: {value}\n\n")
             
             rows.append(row)
             file.write("\n-----------------------\n")
