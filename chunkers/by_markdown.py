@@ -7,11 +7,11 @@ from tools.markdown_utils import contains_strong_text, count_leading_hash
 from tools.save_result import save_result
 from tools.get_embedding import add_embeddings
 
-def get_md_pages(filename, save_to_new_file) -> List[dict]:
+def get_md_pages(filename, save_to_new_file, header_ratio = 0.09, footer_ratio = 0.91, yes_size_round_up = "Y") -> List[dict]:
     """split pdf into markdown pages"""
 
     output_file = "markdown/" + filename + ".md"
-    md_pages = pdf_to_markdown(filename)
+    md_pages = pdf_to_markdown(filename, header_ratio, footer_ratio, yes_size_round_up)
 
     if save_to_new_file == "y":
         md_content = ""
@@ -29,13 +29,12 @@ def context(contents) -> str:
     return "".join(contents)
 
 
-def split_text(md_pages: List[dict], split_level, split_on_strong_text) -> List[dict]:
+def split_text(md_pages: List[dict], split_level, yes_split_on_strong_text) -> List[dict]:
     """split text into chunks based on markdown"""
 
     final_chunks = []
     stack = []
     contents = []
-
 
     total_pages = len(md_pages)
 
@@ -62,7 +61,7 @@ def split_text(md_pages: List[dict], split_level, split_on_strong_text) -> List[
             if hash_count > split_level:
                 line = line.lstrip("#")
 
-            if contains_strong_text(line) and split_on_strong_text != "n":
+            if contains_strong_text(line) and yes_split_on_strong_text != "n":
                 hash_count = split_level
 
             if line.strip() == "":
@@ -78,7 +77,8 @@ def split_text(md_pages: List[dict], split_level, split_on_strong_text) -> List[
 
                 if stack:
                     contents.append(cur_section)
-                    cur_section = line + "\n"
+
+                cur_section = line + "\n"
 
                 if stack and stack[-1]["lev"] >= hash_count:
 
@@ -86,14 +86,15 @@ def split_text(md_pages: List[dict], split_level, split_on_strong_text) -> List[
                     page_range = (stack[-1]["page"], page["metadata"]["page"])
                     text = context(contents)
 
-                    final_chunk = {
-                        "text": text,
-                        "page_range": page_range,
-                        "line_range": line_range,
-                        "filename": page["metadata"]["file_path"],
-                    }
+                    if text.strip() != "":
+                        final_chunk = {
+                            "text": text,
+                            "page_range": page_range,
+                            "line_range": line_range,
+                            "filename": page["metadata"]["file_path"],
+                        }
 
-                    final_chunks.append(final_chunk)
+                        final_chunks.append(final_chunk)
 
 
                 while stack and stack[-1]["lev"] >= hash_count:
@@ -135,12 +136,15 @@ def main():
     """ main """
     filename = input("File Name: ")
     save_to_new_file = input("Save to new file? (y/N) ")
-    md_pages = get_md_pages(filename, save_to_new_file)
+    header_ratio = float(input("Header Ratio: ") or 0.09)
+    footer_ratio = float(input("Footer Ratio: ") or 0.91)
+    yes_size_round_up = (input("Size round up? (Y/n) ") or "Y")
+    md_pages = get_md_pages(filename, save_to_new_file, header_ratio, footer_ratio, yes_size_round_up)
 
     split_level = int(input("Enter the number of # (between 1 and 6): "))
-    split_on_strong_text = input("Split on **{Strong Text}**? (Y/n) ")
+    yes_split_on_strong_text = input("Split on **{Strong Text}**? (Y/n) ")
 
-    final_chunks = split_text(md_pages, split_level, split_on_strong_text)
+    final_chunks = split_text(md_pages, split_level, yes_split_on_strong_text)
 
     yes_add_embedding = input("Add embedding? (y/N) ")
 

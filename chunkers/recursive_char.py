@@ -71,14 +71,16 @@ def main():
 
     filename = input("File Name: ")
     input_file = "data/" + filename + ".pdf"
+    header_ratio = float(input("Header Ratio: ") or 0.09)
+    footer_ratio = float(input("Footer Ratio: ") or 0.91)
 
-    lines, _ = extract_lines(input_file)
+    lines, _ = extract_lines(input_file, header_ratio, footer_ratio)
 
     yes_split_empty_line = input("Split empty line? (Y/n) ")
     chunk_size = int(input("Chunk Size: "))
     overlap = int(input("Overlap Size: "))
 
-    final_chunks = split_text(lines, ["。", ".", "\n", "  ", " "], yes_split_empty_line, chunk_size, overlap)
+    final_chunks = split_text(lines, ["。", "\n", "  ", ".",  " "], yes_split_empty_line, chunk_size, overlap)
 
     yes_add_embedding = input("Add embedding? (y/N) ")
 

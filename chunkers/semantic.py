@@ -86,7 +86,12 @@ def main():
     buffer_size = int(input("Buffer Size: "))
     chunk_number = int(input("Chunk Number: "))
     input_file = "data/" + filename + ".pdf"
-    lines, _ = extract_lines(input_file)
+
+    header_ratio = float(input("Header Ratio: ") or 0.09)
+    footer_ratio = float(input("Footer Ratio: ") or 0.91)
+
+    lines, _ = extract_lines(input_file, header_ratio, footer_ratio)
+
     final_chunks = split_text(lines, buffer_size, chunk_number)
 
     save_result(final_chunks, "semantic", filename)

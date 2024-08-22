@@ -4,7 +4,7 @@ from collections import Counter
 from typing import List
 import pdfplumber
 
-def extract_lines(pdf_path, header_ratio = 0.09, footer_ratio = 0.95):
+def extract_lines(pdf_path, header_ratio = 0.09, footer_ratio = 0.91, yes_size_round_up = "Y"):
     """ extract lines """
 
     font_size_counter = Counter()
@@ -12,16 +12,16 @@ def extract_lines(pdf_path, header_ratio = 0.09, footer_ratio = 0.95):
     line_id = 0
 
     with pdfplumber.open(pdf_path) as pdf:
+
         for i in range(len(pdf.pages)):
+
             page = pdf.pages[i]
             chars = page.chars
             page_height = page.height
 
             last_bottom = -1
-
-            tmp_counter = Counter()
-
             line_content = ""
+            tmp_counter = Counter()
 
             for char in chars:
 
@@ -53,13 +53,17 @@ def extract_lines(pdf_path, header_ratio = 0.09, footer_ratio = 0.95):
                     line_id += 1
 
                 line_content += char["text"]
-                tmp_counter[char["size"]] += 1
+                size = char["size"] if yes_size_round_up == "n" else round(char["size"], 5)
+                tmp_counter[size] += 1
                 last_bottom = char["bottom"]
 
             cur_font_size = 0
 
             if tmp_counter:
-                cur_font_size = tmp_counter.most_common()[0][0]
+                cur_font_size = tmp_counter.most_common(1)[0][0]
+
+
+            font_size_counter[cur_font_size] += 1
 
             lines.append({
                 "text": (line_content + "\n"),
@@ -68,11 +72,6 @@ def extract_lines(pdf_path, header_ratio = 0.09, footer_ratio = 0.95):
                 "line_id": line_id,
                 "file_path": pdf_path
             })
-
-
-        most_common_sizes = tmp_counter.most_common()
-
-        font_size_counter[most_common_sizes[0][0]] += 1
 
 
     repeated_sizes = [size for size, count in font_size_counter.items() if count > 0]
@@ -111,7 +110,7 @@ def add_hash_to_header_lines(lines, header_sizes):
             })
             page_content = ""
 
-        if cur_font_size in header_sizes:
+        if line["text"].strip() != "" and cur_font_size in header_sizes:
             number_of_hashes = header_sizes.index(cur_font_size) + 1
             for _ in range(number_of_hashes):
                 line["text"] = "#" + line["text"]
@@ -132,10 +131,10 @@ def add_hash_to_header_lines(lines, header_sizes):
     return md_pages
 
 
-def pdf_to_markdown(filename: str) -> List[dict]:
+def pdf_to_markdown(filename: str, header_ratio = 0.09, footer_ratio = 0.91, yes_size_round_up = "Y") -> List[dict]:
     input_file = "data/" + filename + ".pdf"
 
-    lines, header_sizes = extract_lines(input_file)
+    lines, header_sizes = extract_lines(input_file, header_ratio, footer_ratio, yes_size_round_up)
 
     result = add_hash_to_header_lines(lines, header_sizes)
 
