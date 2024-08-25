@@ -1,8 +1,8 @@
 .DS_Store
-*/csv/*
-*/output/*
-*/markdown/*
-*/data/*
+*csv/*
+*output/*
+*markdown/*
+*data/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
