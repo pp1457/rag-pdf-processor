@@ -87,13 +87,14 @@ def main():
 
     final_chunks = split_text(lines, ["。", "\n", "  ", ".",  " "], yes_split_empty_line, chunk_size, overlap)
 
+    model_name = "no"
     if yes_add_embedding == "y":
         final_chunks = add_embeddings(final_chunks, model_name)
 
 
     chunking_method = "recursive_char|chunk_size=" + str(chunk_size) + "|overlap_size=" + str(overlap)
 
-    save_result(final_chunks, chunking_method, filename)
+    save_result(final_chunks, chunking_method, filename, model_name)
 
 
 if __name__ == "__main__":

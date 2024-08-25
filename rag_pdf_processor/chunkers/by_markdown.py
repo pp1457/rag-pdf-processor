@@ -147,6 +147,7 @@ def main():
     yes_split_on_strong_text = input("Split on **{Strong Text}**? (Y/n) ")
     yes_add_embedding = input("Add embedding? (y/N) ")
 
+    model_name = "no"
     if yes_add_embedding == "y":
         model_name = input("Chunk Embedding Model: ")
 
@@ -159,7 +160,7 @@ def main():
 
     chunking_method = "by_markdown|number_of_hash=" + str(split_level)
 
-    save_result(final_chunks, chunking_method, filename)
+    save_result(final_chunks, chunking_method, filename, model_name)
         
 
 if __name__ == "__main__":

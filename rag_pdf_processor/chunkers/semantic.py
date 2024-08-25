@@ -1,7 +1,7 @@
 from tqdm import tqdm
 from rag_pdf_processor.pdf_to_markdown.with_pdfplumber import extract_lines
 from rag_pdf_processor.tools.split_lines import split_into_sentences
-from rag_pdf_processor.tools.get_embedding_ollama import get_embedding
+from rag_pdf_processor.tools.get_embedding import get_embedding
 from rag_pdf_processor.tools.get_embedding import add_embeddings
 from rag_pdf_processor.tools.math_utils import cos_sim
 from rag_pdf_processor.tools.save_result import save_result
@@ -94,6 +94,7 @@ def main():
 
 
     yes_add_embedding = input("Add embedding? (y/N) ")
+    model_name = "no"
     if yes_add_embedding == "y":
         model_name = input("Chunk Embedding Model: ")
 
@@ -106,7 +107,7 @@ def main():
         final_chunks = add_embeddings(final_chunks, model_name)
 
     chunking_method = "semantic|model=" + str(embedding_model) + "|buffer_size=" + str(buffer_size) + "|chunk_number=" + str(chunk_number)
-    save_result(final_chunks, chunking_method, filename)
+    save_result(final_chunks, chunking_method, filename, model_name)
     
 
 if __name__ == "__main__":
