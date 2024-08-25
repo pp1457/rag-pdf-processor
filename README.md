@@ -77,7 +77,7 @@ List of pages, each page is a dictionary, contains the following keys
         - `text(str)` : content of the page
         - `metadata(dict)` : dictionary contains file_path, and page (page number)
 
-* ``` split_text(input_path, header_ratio = 0.09, footer_ratio = 0.91, yes_save_to_new_file = "N", output_path = "markdown/tmp.md", yes_size_round_up = "Y", split_level = 3, yes_split_on_strong_text = "Y", yes_add_embedding = "N", chunk_embedding_model = "no-embedding") -> final_chunks```
+* ```split_text(input_path, header_ratio = 0.09, footer_ratio = 0.91, yes_save_to_new_file = "N", output_path = "markdown/tmp.md", yes_size_round_up = "Y", split_level = 3, yes_split_on_strong_text = "Y", yes_add_embedding = "N", chunk_embedding_model = "no-embedding") -> final_chunks```
     - `input_path(str)` :
 Path of the input pdf file
     - `header_ratio(float)` :
