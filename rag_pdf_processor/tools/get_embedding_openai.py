@@ -24,7 +24,7 @@ def add_embeddings(chunks, model_name):
     print("Embedding chunks...")
     pbar = tqdm(total=len(chunks))
     for chunk in chunks:
-        chunk["embedding"] = get_embedding(chunk["text"], model_name)
+        chunk["embedding"] = get_embedding_openai(chunk["text"], model_name)
         chunk["embedding_model"] = model_name
         pbar.update(1)
     pbar.close()
@@ -33,7 +33,7 @@ def add_embeddings(chunks, model_name):
 
 
 def main():
-    get_embedding("Apple")
+    get_embedding_openai("Apple", "text-embedding-3-small")
 
 if __name__ == "__main__":
     main()
