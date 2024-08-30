@@ -32,8 +32,7 @@ def recursive_char(
         if overlap < len(tmp_chunk):
             last_overlap = tmp_chunk[len(tmp_chunk) - overlap: len(tmp_chunk)]
         else:
-            last_overlap = []
-            overlap = 0
+            last_overlap = tmp
 
         tmp_result = recursive_char(combine_chunk, split_characters[1:], chunk_size, overlap)
 
